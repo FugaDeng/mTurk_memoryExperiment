@@ -1,0 +1,1378 @@
+<!--Source script--><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="https://timbrady.org/turk/TimTurkTools.js"></script><!--Where you make everything pretty-->
+
+<style type="text/css">
+.page {
+	display: none;
+}
+
+.displays{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+	height: auto;
+}
+
+#instructions{
+	display: none;
+}
+
+#startNotice{
+	display: none;
+}
+#encRespCues, #retRespCues {
+	font-size: 25px;
+	position: relative;
+	display: none;
+	width: 100%;
+	padding: 5px 0;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	margin-top: 1px;
+}
+#retRespFeedback{
+	font-size: 25px;
+	position: relative;
+	display: none;
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	margin-top: 1px;
+}
+.encLabel, .retWordCue{
+	font-size: 25px;
+	position: relative;
+	display: none;
+	width: 100%;
+	padding: 10px 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: white;
+	margin-top: 1px;
+}
+
+</style>
+
+<!--Consent div-->
+<div id="consent" style="width:1200px; margin: 0 auto; font-family:Arial;">
+	
+<div class="page" id="page1">
+<p style="position:relative; width:1200px; font-size: 22px; position:relative; text-align: center;"><br><br>Please read the following consent form and sign each page with your mTurk worker ID prior to completing the prescreening questionnaire. If you are not qualified to participate in the study, you will be notified immediately and we will ask you to return the HIT. If you are eligible and would like to participate, you will be given permission to continue to the task.<br><br><br></p>
+
+<p><img alt="" src="URL to the image file of the consent form" style="position:relative; margin-left: auto; margin-right: auto; border: 2px solid #555;"/></p><!-- UPDATE -->
+
+<p>mTurk worker ID: <input id="mturkSig1" name="mturkSig1" type="text" /></p>
+
+<p><img alt="" src="URL to the image file of the consent form" style="position:relative; margin-left: auto; margin-right: auto; border: 2px solid #555;"/></p><!-- UPDATE -->
+
+<p>mTurk worker ID: <input id="mturkSig2" name="mturkSig2" type="text" /></p>
+
+<p><img alt="" src="URL to the image file of the consent form" style="position:relative; margin-left: auto; margin-right: auto; border: 2px solid #555;"/></p><!-- UPDATE -->
+
+<p>mTurk worker ID: <input id="mturkSig3" name="mturkSig3" type="text" /></p>
+
+<div style="position:relative; width:1200px; margin:0 auto; font-family:Arial; text-align:center; font-size: 30px;"><a class="nextLink" href="javascript:GoToQ()">Next Page</a><p><br><br></p></div>
+<br><br>
+</div>
+
+<div class="page" id="page2">
+<p>Click on the pages to enlarge if you wish to refer back to the consent form.</p>
+
+<p><a href="javascript:showCloseLevel('p2bigpage1','p2smallpage1')"><img alt="" height="403" id="p2smallpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" width="312" /></a> <a href="javascript:showCloseLevel('p2smallpage1','p2bigpage1')"><img alt="" id="p2bigpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p2bigpage2','p2smallpage2')"><img alt="" height="403" id="p2smallpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" width="312" /></a> <a href="javascript:showCloseLevel('p2smallpage2','p2bigpage2')"><img alt="" id="p2bigpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p2bigpage3','p2smallpage3')"><img alt="" height="403" id="p2smallpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" width="312" /></a> <a href="javascript:showCloseLevel('p2smallpage3','p2bigpage3')"><img alt="" id="p2bigpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" style="display:none" /></a></p>
+
+<p>I am age 18 or older.</p>
+<p><input name="18orOlder" type="radio" value="yes" /> Yes</p>
+<p><input name="18orOlder" type="radio" value="no" /> No</p>
+
+<p>&nbsp;</p>
+
+<div style="position:relative; width:1000px; margin:0 auto; font-family:Arial; text-align:center; font-size: 30px;"><a class="nextLink" href="javascript:NextQ()">Next Page</a></div>
+</div>
+
+<div class="page" id="page3">
+<p>Click on the pages to enlarge if you wish to refer back to the consent form.</p>
+
+<p><a href="javascript:showCloseLevel('p3bigpage1','p3smallpage1')"><img alt="" height="403" id="p3smallpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" width="312" /></a> <a href="javascript:showCloseLevel('p3smallpage1','p3bigpage1')"><img alt="" id="p3bigpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p3bigpage2','p3smallpage2')"><img alt="" height="403" id="p3smallpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" width="312" /></a> <a href="javascript:showCloseLevel('p3smallpage2','p3bigpage2')"><img alt="" id="p3bigpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p3bigpage3','p3smallpage3')"><img alt="" height="403" id="p3smallpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" width="312" /></a> <a href="javascript:showCloseLevel('p3smallpage3','p3bigpage3')"><img alt="" id="p3bigpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" style="display:none" /></a></p>
+
+<p>I am a native English speaker.</p>
+<p><input name="EnglishSpeaker" type="radio" value="yes" /> Yes</p>
+<p><input name="EnglishSpeaker" type="radio" value="no" /> No</p>
+
+<p>&nbsp;</p>
+
+<div style="position:relative; width:1000px; margin:0 auto; font-family:Arial; text-align:center; font-size: 30px;"><a class="nextLink" href="javascript:NextQ()">Next Page</a></div>
+</div>
+
+<div class="page" id="page4">
+<p>Click on the pages to enlarge if you wish to refer back to the consent form.</p>
+
+<p><a href="javascript:showCloseLevel('p4bigpage1','p4smallpage1')"><img alt="" height="403" id="p4smallpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" width="312" /></a> <a href="javascript:showCloseLevel('p4smallpage1','p4bigpage1')"><img alt="" id="p4bigpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p4bigpage2','p4smallpage2')"><img alt="" height="403" id="p4smallpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" width="312" /></a> <a href="javascript:showCloseLevel('p4smallpage2','p4bigpage2')"><img alt="" id="p4bigpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p4bigpage3','p4smallpage3')"><img alt="" height="403" id="p4smallpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" width="312" /></a> <a href="javascript:showCloseLevel('p4smallpage3','p4bigpage3')"><img alt="" id="p4bigpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" style="display:none" /></a></p>
+
+<p>I have read and understand the information above.</p>
+<p><input name="ReadAndUnderstand" type="radio" value="yes" />Yes</p>
+<p><input name="ReadAndUnderstand" type="radio" value="no" />No</p>
+
+<p>&nbsp;</p>
+
+<div style="position:relative; width:1000px; margin:0 auto; font-family:Arial; text-align:center; font-size: 30px;"><a class="nextLink" href="javascript:NextQ()">Next Page</a></div>
+</div>
+
+<div class="page" id="page5">
+<p>Click on the pages to enlarge if you wish to refer back to the consent form.</p>
+
+<p><a href="javascript:showCloseLevel('p5bigpage1','p5smallpage1')"><img alt="" height="403" id="p5smallpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" width="312" /></a> <a href="javascript:showCloseLevel('p5smallpage1','p5bigpage1')"><img alt="" id="p5bigpage1" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent1.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p5bigpage2','p5smallpage2')"><img alt="" height="403" id="p5smallpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" width="312" /></a> <a href="javascript:showCloseLevel('p5smallpage2','p5bigpage2')"><img alt="" id="p5bigpage2" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent2.png" style="display:none" /></a> <a href="javascript:showCloseLevel('p5bigpage3','p5smallpage3')"><img alt="" height="403" id="p5smallpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" width="312" /></a> <a href="javascript:showCloseLevel('p5smallpage3','p5bigpage3')"><img alt="" id="p5bigpage3" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/FSconsent3.png" style="display:none" /></a></p>
+
+<p>I want to participate in this research and continue with the task.</p>
+<p><input name="WantToContinue" type="radio" value="yes" /> Yes</p>
+<p><input name="WantToContinue" type="radio" value="no" /> No</p>
+
+<p>&nbsp;</p>
+
+<div style="position:relative; width:1000px; margin:0 auto; font-family:Arial; text-align:center; font-size: 30px;"><a class="nextLink" href="javascript:NextQ()">Next Page</a></div>
+</div>
+
+<div class="page" id="page6">
+<p>You are eligible to participate in this study! Please complete the following demographic information. The following information is being collected in accordance with reporting requirements of our funding agency, the National Institutes of Health. These data will only be reported in aggregate form, with no personal identifiers. If you do not wish to provide this information, please return the HIT.</p>
+
+<p style="margin-top: 100px;"><b>1. AGE: </b></p>
+<select id="d1" name="age"><option value="none">Select Age</option><option value="under 25">under 25</option><option value="25~34">25~34</option><option value="35~44">35~44</option><option value="45~54">45~54</option><option value="55~64">55~64</option><option value="65~74">65~74</option><option value="75~84">75~84</option><option value="85 and above">85 and above</option> </select>
+
+
+<p style="margin-top: 100px;"><b>2. EDUCATION: </b>Please select the highest grade or degree that you have <u>completed</u>.</p>
+<select id="d2" name="YrsEducation"><option value="none">Select Education</option><option value="12th grade">12th grade, high school diploma, or GED</option><option value="1 yr college">1 year of college or professional/technical training</option><option value="2 yrs college">2 years of college or professional/technical training or an Associate's degree</option><option value="3 yrs college">3 years of college or professional/technical training</option><option value="4 yrs college">4 years of college or professional/technical training or a Bachelor's degree</option><option value="post-grad">Some post-graduate work</option><option value="Master's">Master's degree (M.A. or M.S.)</option><option value="Doctoral">Doctoral degree</option><option value="Other">Other</option> </select>
+
+<p>If other, please describe: <input name="OtherEducation" type="text" /></p>
+
+<p style="margin-top: 100px;"><b>3. GENDER</b></p>
+<select id="d3" name="Gender"><option value="none">Select Gender</option><option value="female">Female</option><option value="male">Male</option> </select>
+
+<p style="margin-top: 100px;"><b>4. ETHNICITY:</b> Do you consider yourself to be Hispanic or Latino? (See definition below.)</p>
+
+<p><b>Hispanic or Latino.</b> A person of Mexican, Puerto Rican, Cuban, South or Cetral American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin", can be used in addition to "Hispanic or Latino."</p>
+<select id="d4" name="Ethnicity"><option value="none">Select Ethnicity</option><option value="Hispanic">Hispanic or Latino</option><option value="Not Hispanic">Not Hispanic or Latino</option><option value="Decline">Do not wish to provide information</option> </select>
+
+<p style="margin-top: 100px;"><b>5. RACE:</b> What race do you consider yourself to be? (Please select one or more of the following. To select more than one option, hold down the "CTRL" key while clicking each relevant option.)</p>
+
+<ul>
+	<li style="margin-top: 20px;"><b>American Indian or Alaska Native.</b> A person having origins in any of the original peoples of North, Central, or South American, and who maintains tribal affiliation or community attachment.</li>
+	<li style="margin-top: 20px;"><b>Asian.</b> A person having oringins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (Note: Individuals from the Philippine Islands have been recorded as Pacific Islanders in previous data collection strategies.)</li>
+	<li style="margin-top: 20px;"><b>Black or African American.</b> A person having origins in any of the black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black" or "African American."</li>
+	<li style="margin-top: 20px;"><b>Native Hawaiian or Other Pacific Islander.</b> A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands.</li>
+	<li style="margin-top: 20px;"><b>White.</b> A person having orgins in any of the original peoples of Europe, the Middle East, or North Africa.</li>
+</ul>
+<select id="d5" multiple="yes" name="Race"><option selected="selected" value="none">Select Race</option><option value="Native American">American Indian or Alaska Native</option><option value="Asian">Asian</option><option value="Black">Black or African American</option><option value="Pacific Islander">Native Hawaiian or Other Pacific Islander</option><option value="White">White</option><option value="Decline">Do not wish to provide information</option> </select>
+
+
+<div style="position:relative; width:1000px; margin:0 auto; font-family:Arial; text-align:center; font-size: 30px;"><a class="nextLink" href="javascript:StartScreen()">Next Page</a></div>
+</div>
+</div><!--Consent div ends-->
+
+
+<!--Encoding Experiment Div-->
+<div id="experimentEncoding">
+
+<!--Stimulus presentation-->
+<img class="displays" id="obj0_enc_stim" name="obj000_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/ladybird.jpg">
+<p class="encLabel" id="obj0_enc_word_stim"><b>ladybug</b></p>
+<img class="displays" id="obj1_enc_stim" name="obj001_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/papaya.jpg">
+<p class="encLabel" id="obj1_enc_word_stim"><b>papaya</b></p>
+<img class="displays" id="obj2_enc_stim" name="obj002_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/machete.jpg">
+<p class="encLabel" id="obj2_enc_word_stim"><b>knife</b></p>
+<img class="displays" id="obj3_enc_stim" name="obj003_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/motorboa.jpg">
+<p class="encLabel" id="obj3_enc_word_stim"><b>motorboat</b></p>
+<img class="displays" id="obj4_enc_stim" name="obj004_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/modelsa3.jpg">
+<p class="encLabel" id="obj4_enc_word_stim"><b>sailboat</b></p>
+<img class="displays" id="obj5_enc_stim" name="obj005_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/ray.jpg">
+<p class="encLabel" id="obj5_enc_word_stim"><b>ray</b></p>
+<img class="displays" id="obj6_enc_stim" name="obj006_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/hairdryer.jpg">
+<p class="encLabel" id="obj6_enc_word_stim"><b>hairdryer</b></p>
+<img class="displays" id="obj7_enc_stim" name="obj007_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/finger.jpg">
+<p class="encLabel" id="obj7_enc_word_stim"><b>finger</b></p>
+<img class="displays" id="obj8_enc_stim" name="obj008_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/toucan.jpg">
+<p class="encLabel" id="obj8_enc_word_stim"><b>toucan</b></p>
+<img class="displays" id="obj9_enc_stim" name="obj009_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/pistol.jpg">
+<p class="encLabel" id="obj9_enc_word_stim"><b>revolver</b></p>
+<img class="displays" id="obj10_enc_stim" name="obj010_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/rifle.jpg">
+<p class="encLabel" id="obj10_enc_word_stim"><b>rifle</b></p>
+<img class="displays" id="obj11_enc_stim" name="obj011_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/wheel.jpg">
+<p class="encLabel" id="obj11_enc_word_stim"><b>tire</b></p>
+<img class="displays" id="obj12_enc_stim" name="obj012_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/beret.jpg">
+<p class="encLabel" id="obj12_enc_word_stim"><b>beret</b></p>
+<img class="displays" id="obj13_enc_stim" name="obj013_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/yoyo.jpg">
+<p class="encLabel" id="obj13_enc_word_stim"><b>yoyo</b></p>
+<img class="displays" id="obj14_enc_stim" name="obj014_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/beagle.jpg">
+<p class="encLabel" id="obj14_enc_word_stim"><b>beagle</b></p>
+<img class="displays" id="obj15_enc_stim" name="obj015_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/tack3.jpg">
+<p class="encLabel" id="obj15_enc_word_stim"><b>push pin</b></p>
+<img class="displays" id="obj16_enc_stim" name="obj016_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/hand.jpg">
+<p class="encLabel" id="obj16_enc_word_stim"><b>hand</b></p>
+<img class="displays" id="obj17_enc_stim" name="obj017_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/polaroi2.jpg">
+<p class="encLabel" id="obj17_enc_word_stim"><b>polaroid</b></p>
+<img class="displays" id="obj18_enc_stim" name="obj018_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/blueyarn.jpg">
+<p class="encLabel" id="obj18_enc_word_stim"><b>yarn</b></p>
+<img class="displays" id="obj19_enc_stim" name="obj019_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/rug4.jpg">
+<p class="encLabel" id="obj19_enc_word_stim"><b>rug</b></p>
+<img class="displays" id="obj20_enc_stim" name="obj020_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/snowtoy3.jpg">
+<p class="encLabel" id="obj20_enc_word_stim"><b>snowglobe</b></p>
+<img class="displays" id="obj21_enc_stim" name="obj021_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/babysea3.jpg">
+<p class="encLabel" id="obj21_enc_word_stim"><b>baby seat</b></p>
+<img class="displays" id="obj22_enc_stim" name="obj022_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/blglasv2.jpg">
+<p class="encLabel" id="obj22_enc_word_stim"><b>vase</b></p>
+<img class="displays" id="obj23_enc_stim" name="obj023_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/lawnmower.jpg">
+<p class="encLabel" id="obj23_enc_word_stim"><b>lawnmower</b></p>
+<img class="displays" id="obj24_enc_stim" name="obj024_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/aqueduct_0.jpg">
+<p class="encLabel" id="obj24_enc_word_stim"><b>aqueduct</b></p>
+<img class="displays" id="obj25_enc_stim" name="obj025_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/bridge_0.jpg">
+<p class="encLabel" id="obj25_enc_word_stim"><b>bridge</b></p>
+<img class="displays" id="obj26_enc_stim" name="obj026_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/slingsho.jpg">
+<p class="encLabel" id="obj26_enc_word_stim"><b>slingshot</b></p>
+<img class="displays" id="obj27_enc_stim" name="obj027_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/bleachers.jpg">
+<p class="encLabel" id="obj27_enc_word_stim"><b>bleachers</b></p>
+<img class="displays" id="obj28_enc_stim" name="obj028_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/butter.jpg">
+<p class="encLabel" id="obj28_enc_word_stim"><b>butter</b></p>
+<img class="displays" id="obj29_enc_stim" name="obj029_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/churchst.jpg">
+<p class="encLabel" id="obj29_enc_word_stim"><b>church</b></p>
+<img class="displays" id="obj30_enc_stim" name="obj030_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/swimming_costume.jpg">
+<p class="encLabel" id="obj30_enc_word_stim"><b>swimsuit</b></p>
+<img class="displays" id="obj31_enc_stim" name="obj031_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/top.jpg">
+<p class="encLabel" id="obj31_enc_word_stim"><b>blouse</b></p>
+<img class="displays" id="obj32_enc_stim" name="obj032_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/road.jpg">
+<p class="encLabel" id="obj32_enc_word_stim"><b>road</b></p>
+<img class="displays" id="obj33_enc_stim" name="obj033_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/atombstone2.jpg">
+<p class="encLabel" id="obj33_enc_word_stim"><b>tombstone</b></p>
+<img class="displays" id="obj34_enc_stim" name="obj034_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/hearse3.jpg">
+<p class="encLabel" id="obj34_enc_word_stim"><b>hearse</b></p>
+<img class="displays" id="obj35_enc_stim" name="obj035_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/donut5.jpg">
+<p class="encLabel" id="obj35_enc_word_stim"><b>donut</b></p>
+<img class="displays" id="obj36_enc_stim" name="obj036_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/flags18.jpg">
+<p class="encLabel" id="obj36_enc_word_stim"><b>flag</b></p>
+<img class="displays" id="obj37_enc_stim" name="obj037_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/kayak.jpg">
+<p class="encLabel" id="obj37_enc_word_stim"><b>kayak</b></p>
+<img class="displays" id="obj38_enc_stim" name="obj038_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/thermos.jpg">
+<p class="encLabel" id="obj38_enc_word_stim"><b>thermos</b></p>
+<img class="displays" id="obj39_enc_stim" name="obj039_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/cane8.jpg">
+<p class="encLabel" id="obj39_enc_word_stim"><b>cane</b></p>
+<img class="displays" id="obj40_enc_stim" name="obj040_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/pineapple.jpg">
+<p class="encLabel" id="obj40_enc_word_stim"><b>pineapple</b></p>
+<img class="displays" id="obj41_enc_stim" name="obj041_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/fez.jpg">
+<p class="encLabel" id="obj41_enc_word_stim"><b>fez</b></p>
+<img class="displays" id="obj42_enc_stim" name="obj042_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/peacock.jpg">
+<p class="encLabel" id="obj42_enc_word_stim"><b>peacock</b></p>
+<img class="displays" id="obj43_enc_stim" name="obj043_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/ostrich5.jpg">
+<p class="encLabel" id="obj43_enc_word_stim"><b>ostrich</b></p>
+<img class="displays" id="obj44_enc_stim" name="obj044_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/galleon.jpg">
+<p class="encLabel" id="obj44_enc_word_stim"><b>galleon</b></p>
+<img class="displays" id="obj45_enc_stim" name="obj045_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/bull.jpg">
+<p class="encLabel" id="obj45_enc_word_stim"><b>bull</b></p>
+<img class="displays" id="obj46_enc_stim" name="obj046_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/shark.jpg">
+<p class="encLabel" id="obj46_enc_word_stim"><b>shark</b></p>
+<img class="displays" id="obj47_enc_stim" name="obj047_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/stepladd.jpg">
+<p class="encLabel" id="obj47_enc_word_stim"><b>stepladder</b></p>
+<img class="displays" id="obj48_enc_stim" name="obj048_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/whip.jpg">
+<p class="encLabel" id="obj48_enc_word_stim"><b>whip</b></p>
+<img class="displays" id="obj49_enc_stim" name="obj049_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/holly8.jpg">
+<p class="encLabel" id="obj49_enc_word_stim"><b>holly</b></p>
+<img class="displays" id="obj50_enc_stim" name="obj050_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/antcable.jpg">
+<p class="encLabel" id="obj50_enc_word_stim"><b>trolley</b></p>
+<img class="displays" id="obj51_enc_stim" name="obj051_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/headband.jpg">
+<p class="encLabel" id="obj51_enc_word_stim"><b>headband</b></p>
+<img class="displays" id="obj52_enc_stim" name="obj052_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/featherh.jpg">
+<p class="encLabel" id="obj52_enc_word_stim"><b>headdress</b></p>
+<img class="displays" id="obj53_enc_stim" name="obj053_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/radio.jpg">
+<p class="encLabel" id="obj53_enc_word_stim"><b>radio</b></p>
+<img class="displays" id="obj54_enc_stim" name="obj054_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/almond1.jpg">
+<p class="encLabel" id="obj54_enc_word_stim"><b>almond</b></p>
+<img class="displays" id="obj55_enc_stim" name="obj055_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/pumpkin.jpg">
+<p class="encLabel" id="obj55_enc_word_stim"><b>pumpkin</b></p>
+<img class="displays" id="obj56_enc_stim" name="obj056_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/boat.jpg">
+<p class="encLabel" id="obj56_enc_word_stim"><b>yacht</b></p>
+<img class="displays" id="obj57_enc_stim" name="obj057_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/auttree.jpg">
+<p class="encLabel" id="obj57_enc_word_stim"><b>coral</b></p>
+<img class="displays" id="obj58_enc_stim" name="obj058_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/lookdown.jpg">
+<p class="encLabel" id="obj58_enc_word_stim"><b>fish</b></p>
+<img class="displays" id="obj59_enc_stim" name="obj059_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/bobber.jpg">
+<p class="encLabel" id="obj59_enc_word_stim"><b>bobber</b></p>
+<img class="displays" id="obj60_enc_stim" name="obj060_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/ring.jpg">
+<p class="encLabel" id="obj60_enc_word_stim"><b>ring</b></p>
+<img class="displays" id="obj61_enc_stim" name="obj061_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/axe.jpg">
+<p class="encLabel" id="obj61_enc_word_stim"><b>axe</b></p>
+<img class="displays" id="obj62_enc_stim" name="obj062_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/organ.jpg">
+<p class="encLabel" id="obj62_enc_word_stim"><b>organ</b></p>
+<img class="displays" id="obj63_enc_stim" name="obj063_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/camera10.jpg">
+<p class="encLabel" id="obj63_enc_word_stim"><b>camera</b></p>
+<img class="displays" id="obj64_enc_stim" name="obj064_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/cbspeake.jpg">
+<p class="encLabel" id="obj64_enc_word_stim"><b>microphone</b></p>
+<img class="displays" id="obj65_enc_stim" name="obj065_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/oyster.jpg">
+<p class="encLabel" id="obj65_enc_word_stim"><b>oyster</b></p>
+<img class="displays" id="obj66_enc_stim" name="obj066_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/trousers.jpg">
+<p class="encLabel" id="obj66_enc_word_stim"><b>pants</b></p>
+<img class="displays" id="obj67_enc_stim" name="obj067_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/compass.jpg">
+<p class="encLabel" id="obj67_enc_word_stim"><b>compass</b></p>
+<img class="displays" id="obj68_enc_stim" name="obj068_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/trombone.jpg">
+<p class="encLabel" id="obj68_enc_word_stim"><b>trombone</b></p>
+<img class="displays" id="obj69_enc_stim" name="obj069_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/pen.jpg">
+<p class="encLabel" id="obj69_enc_word_stim"><b>pen</b></p>
+<img class="displays" id="obj70_enc_stim" name="obj070_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/spade.jpg">
+<p class="encLabel" id="obj70_enc_word_stim"><b>shovel</b></p>
+<img class="displays" id="obj71_enc_stim" name="obj071_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/wreath8.jpg">
+<p class="encLabel" id="obj71_enc_word_stim"><b>wreath</b></p>
+<img class="displays" id="obj72_enc_stim" name="obj072_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/walker.jpg">
+<p class="encLabel" id="obj72_enc_word_stim"><b>walker</b></p>
+<img class="displays" id="obj73_enc_stim" name="obj073_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/bell.jpg">
+<p class="encLabel" id="obj73_enc_word_stim"><b>bell</b></p>
+<img class="displays" id="obj74_enc_stim" name="obj074_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/hifi.jpg">
+<p class="encLabel" id="obj74_enc_word_stim"><b>boombox</b></p>
+<img class="displays" id="obj75_enc_stim" name="obj075_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/avocado.jpg">
+<p class="encLabel" id="obj75_enc_word_stim"><b>avocado</b></p>
+<img class="displays" id="obj76_enc_stim" name="obj076_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/mango.jpg">
+<p class="encLabel" id="obj76_enc_word_stim"><b>mango</b></p>
+<img class="displays" id="obj77_enc_stim" name="obj077_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/handbag.jpg">
+<p class="encLabel" id="obj77_enc_word_stim"><b>purse</b></p>
+<img class="displays" id="obj78_enc_stim" name="obj078_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/whisbarr.jpg">
+<p class="encLabel" id="obj78_enc_word_stim"><b>keg</b></p>
+<img class="displays" id="obj79_enc_stim" name="obj079_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/wrist.jpg">
+<p class="encLabel" id="obj79_enc_word_stim"><b>wrist</b></p>
+<img class="displays" id="obj80_enc_stim" name="obj080_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/battery8.jpg">
+<p class="encLabel" id="obj80_enc_word_stim"><b>battery</b></p>
+<img class="displays" id="obj81_enc_stim" name="obj081_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/robin.jpg">
+<p class="encLabel" id="obj81_enc_word_stim"><b>robin</b></p>
+<img class="displays" id="obj82_enc_stim" name="obj082_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/cabin.jpg">
+<p class="encLabel" id="obj82_enc_word_stim"><b>cabin</b></p>
+<img class="displays" id="obj83_enc_stim" name="obj083_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/watermelonslice8.jpg">
+<p class="encLabel" id="obj83_enc_word_stim"><b>watermelon</b></p>
+<img class="displays" id="obj84_enc_stim" name="obj084_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/piano.jpg">
+<p class="encLabel" id="obj84_enc_word_stim"><b>piano</b></p>
+<img class="displays" id="obj85_enc_stim" name="obj085_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/cello.jpg">
+<p class="encLabel" id="obj85_enc_word_stim"><b>cello</b></p>
+<img class="displays" id="obj86_enc_stim" name="obj086_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/helicopter.jpg">
+<p class="encLabel" id="obj86_enc_word_stim"><b>helicopter</b></p>
+<img class="displays" id="obj87_enc_stim" name="obj087_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/sofa_0.jpg">
+<p class="encLabel" id="obj87_enc_word_stim"><b>couch</b></p>
+<img class="displays" id="obj88_enc_stim" name="obj088_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/snail.jpg">
+<p class="encLabel" id="obj88_enc_word_stim"><b>snail</b></p>
+<img class="displays" id="obj89_enc_stim" name="obj089_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/qtips.jpg">
+<p class="encLabel" id="obj89_enc_word_stim"><b>q-tip</b></p>
+<img class="displays" id="obj90_enc_stim" name="obj090_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/tractor.jpg">
+<p class="encLabel" id="obj90_enc_word_stim"><b>tractor</b></p>
+<img class="displays" id="obj91_enc_stim" name="obj091_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/basehat.jpg">
+<p class="encLabel" id="obj91_enc_word_stim"><b>cap</b></p>
+<img class="displays" id="obj92_enc_stim" name="obj092_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/doghouse.jpg">
+<p class="encLabel" id="obj92_enc_word_stim"><b>doghouse</b></p>
+<img class="displays" id="obj93_enc_stim" name="obj093_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/dart3.jpg">
+<p class="encLabel" id="obj93_enc_word_stim"><b>dart</b></p>
+<img class="displays" id="obj94_enc_stim" name="obj094_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/arrow.jpg">
+<p class="encLabel" id="obj94_enc_word_stim"><b>arrow</b></p>
+<img class="displays" id="obj95_enc_stim" name="obj095_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/anticab3.jpg">
+<p class="encLabel" id="obj95_enc_word_stim"><b>armoire</b></p>
+<img class="displays" id="obj96_enc_stim" name="obj096_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/pig.jpg">
+<p class="encLabel" id="obj96_enc_word_stim"><b>pig</b></p>
+<img class="displays" id="obj97_enc_stim" name="obj097_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/cow.jpg">
+<p class="encLabel" id="obj97_enc_word_stim"><b>cow</b></p>
+<img class="displays" id="obj98_enc_stim" name="obj098_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/binocu21.jpg">
+<p class="encLabel" id="obj98_enc_word_stim"><b>periscope</b></p>
+<img class="displays" id="obj99_enc_stim" name="obj099_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/anbasho2.jpg">
+<p class="encLabel" id="obj99_enc_word_stim"><b>booties</b></p>
+<img class="displays" id="obj100_enc_stim" name="obj100_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/wetsuit.jpg">
+<p class="encLabel" id="obj100_enc_word_stim"><b>wetsuit</b></p>
+<img class="displays" id="obj101_enc_stim" name="obj101_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/rice5.jpg">
+<p class="encLabel" id="obj101_enc_word_stim"><b>rice</b></p>
+<img class="displays" id="obj102_enc_stim" name="obj102_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/coffin8.jpg">
+<p class="encLabel" id="obj102_enc_word_stim"><b>coffin</b></p>
+<img class="displays" id="obj103_enc_stim" name="obj103_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/aubergine.jpg">
+<p class="encLabel" id="obj103_enc_word_stim"><b>eggplant</b></p>
+<img class="displays" id="obj104_enc_stim" name="obj104_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/scale26.jpg">
+<p class="encLabel" id="obj104_enc_word_stim"><b>scale</b></p>
+<img class="displays" id="obj105_enc_stim" name="obj105_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/moose.jpg">
+<p class="encLabel" id="obj105_enc_word_stim"><b>moose</b></p>
+<img class="displays" id="obj106_enc_stim" name="obj106_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/deer.jpg">
+<p class="encLabel" id="obj106_enc_word_stim"><b>deer</b></p>
+<img class="displays" id="obj107_enc_stim" name="obj107_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/beerste4.jpg">
+<p class="encLabel" id="obj107_enc_word_stim"><b>mug</b></p>
+<img class="displays" id="obj108_enc_stim" name="obj108_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/bodyscru.jpg">
+<p class="encLabel" id="obj108_enc_word_stim"><b>loofah</b></p>
+<img class="displays" id="obj109_enc_stim" name="obj109_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/torch.jpg">
+<p class="encLabel" id="obj109_enc_word_stim"><b>flashlight</b></p>
+<img class="displays" id="obj110_enc_stim" name="obj110_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/globe9.jpg">
+<p class="encLabel" id="obj110_enc_word_stim"><b>globe</b></p>
+<img class="displays" id="obj111_enc_stim" name="obj111_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/crate7.jpg">
+<p class="encLabel" id="obj111_enc_word_stim"><b>crate</b></p>
+<img class="displays" id="obj112_enc_stim" name="obj112_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/barn_0.jpg">
+<p class="encLabel" id="obj112_enc_word_stim"><b>barn</b></p>
+<img class="displays" id="obj113_enc_stim" name="obj113_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/bell23.jpg">
+<p class="encLabel" id="obj113_enc_word_stim"><b>handbell</b></p>
+<img class="displays" id="obj114_enc_stim" name="obj114_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/socks4.jpg">
+<p class="encLabel" id="obj114_enc_word_stim"><b>sock</b></p>
+<img class="displays" id="obj115_enc_stim" name="obj115_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/laces4.jpg">
+<p class="encLabel" id="obj115_enc_word_stim"><b>shoelace</b></p>
+<img class="displays" id="obj116_enc_stim" name="obj116_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/vest_top.jpg">
+<p class="encLabel" id="obj116_enc_word_stim"><b>tank top</b></p>
+<img class="displays" id="obj117_enc_stim" name="obj117_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/tricycle.jpg">
+<p class="encLabel" id="obj117_enc_word_stim"><b>tricycle</b></p>
+<img class="displays" id="obj118_enc_stim" name="obj118_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/airplnp4.jpg">
+<p class="encLabel" id="obj118_enc_word_stim"><b>biplane</b></p>
+<img class="displays" id="obj119_enc_stim" name="obj119_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/sunglasses.jpg">
+<p class="encLabel" id="obj119_enc_word_stim"><b>sunglasses</b></p>
+<img class="displays" id="obj120_enc_stim" name="obj120_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/elecbea2.jpg">
+<p class="encLabel" id="obj120_enc_word_stim"><b>mixer</b></p>
+<img class="displays" id="obj121_enc_stim" name="obj121_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/blender.jpg">
+<p class="encLabel" id="obj121_enc_word_stim"><b>blender</b></p>
+<img class="displays" id="obj122_enc_stim" name="obj122_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/pillar.jpg">
+<p class="encLabel" id="obj122_enc_word_stim"><b>column</b></p>
+<img class="displays" id="obj123_enc_stim" name="obj123_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/woodpai3.jpg">
+<p class="encLabel" id="obj123_enc_word_stim"><b>pail</b></p>
+<img class="displays" id="obj124_enc_stim" name="obj124_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/mushroom.jpg">
+<p class="encLabel" id="obj124_enc_word_stim"><b>mushroom</b></p>
+<img class="displays" id="obj125_enc_stim" name="obj125_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/shirt.jpg">
+<p class="encLabel" id="obj125_enc_word_stim"><b>shirt</b></p>
+<img class="displays" id="obj126_enc_stim" name="obj126_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/throne.jpg">
+<p class="encLabel" id="obj126_enc_word_stim"><b>throne</b></p>
+<img class="displays" id="obj127_enc_stim" name="obj127_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/door.jpg">
+<p class="encLabel" id="obj127_enc_word_stim"><b>door</b></p>
+<img class="displays" id="obj128_enc_stim" name="obj128_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/mitten3.jpg">
+<p class="encLabel" id="obj128_enc_word_stim"><b>mitten</b></p>
+<img class="displays" id="obj129_enc_stim" name="obj129_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/horn15.jpg">
+<p class="encLabel" id="obj129_enc_word_stim"><b>tuba</b></p>
+<img class="displays" id="obj130_enc_stim" name="obj130_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/clarinet.jpg">
+<p class="encLabel" id="obj130_enc_word_stim"><b>clarinet</b></p>
+<img class="displays" id="obj131_enc_stim" name="obj131_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/garbcoll.jpg">
+<p class="encLabel" id="obj131_enc_word_stim"><b>dustpan</b></p>
+<img class="displays" id="obj132_enc_stim" name="obj132_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/rhinoceros.jpg">
+<p class="encLabel" id="obj132_enc_word_stim"><b>rhinoceros</b></p>
+<img class="displays" id="obj133_enc_stim" name="obj133_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/tongue.jpg">
+<p class="encLabel" id="obj133_enc_word_stim"><b>tongue</b></p>
+<img class="displays" id="obj134_enc_stim" name="obj134_enc_stim" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/planmod.jpg">
+<p class="encLabel" id="obj134_enc_word_stim"><b>planet</b></p>
+
+<!--Pictures and Words-->
+<img class="displays" id="fixation1" name="fixationX" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/fixationX.jpg">
+	
+<div id="encRespCues"><pre><b> Match (1) <-                     -> Not match (0) </b></pre></div>
+
+<!-- match/mismatch responses ; THESE WILL BE EXPORTED TO THE .CSV FILE --> 
+<input id="obj0_enc_response" name="obj000_enc_response" type="hidden" value="" /> <input id="obj0_enc_rt" name="obj000_enc_rt" type="hidden" value="" />
+<input id="obj1_enc_response" name="obj001_enc_response" type="hidden" value="" /> <input id="obj1_enc_rt" name="obj001_enc_rt" type="hidden" value="" />
+<input id="obj2_enc_response" name="obj002_enc_response" type="hidden" value="" /> <input id="obj2_enc_rt" name="obj002_enc_rt" type="hidden" value="" />
+<input id="obj3_enc_response" name="obj003_enc_response" type="hidden" value="" /> <input id="obj3_enc_rt" name="obj003_enc_rt" type="hidden" value="" />
+<input id="obj4_enc_response" name="obj004_enc_response" type="hidden" value="" /> <input id="obj4_enc_rt" name="obj004_enc_rt" type="hidden" value="" />
+<input id="obj5_enc_response" name="obj005_enc_response" type="hidden" value="" /> <input id="obj5_enc_rt" name="obj005_enc_rt" type="hidden" value="" />
+<input id="obj6_enc_response" name="obj006_enc_response" type="hidden" value="" /> <input id="obj6_enc_rt" name="obj006_enc_rt" type="hidden" value="" />
+<input id="obj7_enc_response" name="obj007_enc_response" type="hidden" value="" /> <input id="obj7_enc_rt" name="obj007_enc_rt" type="hidden" value="" />
+<input id="obj8_enc_response" name="obj008_enc_response" type="hidden" value="" /> <input id="obj8_enc_rt" name="obj008_enc_rt" type="hidden" value="" />
+<input id="obj9_enc_response" name="obj009_enc_response" type="hidden" value="" /> <input id="obj9_enc_rt" name="obj009_enc_rt" type="hidden" value="" />
+<input id="obj10_enc_response" name="obj010_enc_response" type="hidden" value="" /> <input id="obj10_enc_rt" name="obj010_enc_rt" type="hidden" value="" />
+<input id="obj11_enc_response" name="obj011_enc_response" type="hidden" value="" /> <input id="obj11_enc_rt" name="obj011_enc_rt" type="hidden" value="" />
+<input id="obj12_enc_response" name="obj012_enc_response" type="hidden" value="" /> <input id="obj12_enc_rt" name="obj012_enc_rt" type="hidden" value="" />
+<input id="obj13_enc_response" name="obj013_enc_response" type="hidden" value="" /> <input id="obj13_enc_rt" name="obj013_enc_rt" type="hidden" value="" />
+<input id="obj14_enc_response" name="obj014_enc_response" type="hidden" value="" /> <input id="obj14_enc_rt" name="obj014_enc_rt" type="hidden" value="" />
+<input id="obj15_enc_response" name="obj015_enc_response" type="hidden" value="" /> <input id="obj15_enc_rt" name="obj015_enc_rt" type="hidden" value="" />
+<input id="obj16_enc_response" name="obj016_enc_response" type="hidden" value="" /> <input id="obj16_enc_rt" name="obj016_enc_rt" type="hidden" value="" />
+<input id="obj17_enc_response" name="obj017_enc_response" type="hidden" value="" /> <input id="obj17_enc_rt" name="obj017_enc_rt" type="hidden" value="" />
+<input id="obj18_enc_response" name="obj018_enc_response" type="hidden" value="" /> <input id="obj18_enc_rt" name="obj018_enc_rt" type="hidden" value="" />
+<input id="obj19_enc_response" name="obj019_enc_response" type="hidden" value="" /> <input id="obj19_enc_rt" name="obj019_enc_rt" type="hidden" value="" />
+<input id="obj20_enc_response" name="obj020_enc_response" type="hidden" value="" /> <input id="obj20_enc_rt" name="obj020_enc_rt" type="hidden" value="" />
+<input id="obj21_enc_response" name="obj021_enc_response" type="hidden" value="" /> <input id="obj21_enc_rt" name="obj021_enc_rt" type="hidden" value="" />
+<input id="obj22_enc_response" name="obj022_enc_response" type="hidden" value="" /> <input id="obj22_enc_rt" name="obj022_enc_rt" type="hidden" value="" />
+<input id="obj23_enc_response" name="obj023_enc_response" type="hidden" value="" /> <input id="obj23_enc_rt" name="obj023_enc_rt" type="hidden" value="" />
+<input id="obj24_enc_response" name="obj024_enc_response" type="hidden" value="" /> <input id="obj24_enc_rt" name="obj024_enc_rt" type="hidden" value="" />
+<input id="obj25_enc_response" name="obj025_enc_response" type="hidden" value="" /> <input id="obj25_enc_rt" name="obj025_enc_rt" type="hidden" value="" />
+<input id="obj26_enc_response" name="obj026_enc_response" type="hidden" value="" /> <input id="obj26_enc_rt" name="obj026_enc_rt" type="hidden" value="" />
+<input id="obj27_enc_response" name="obj027_enc_response" type="hidden" value="" /> <input id="obj27_enc_rt" name="obj027_enc_rt" type="hidden" value="" />
+<input id="obj28_enc_response" name="obj028_enc_response" type="hidden" value="" /> <input id="obj28_enc_rt" name="obj028_enc_rt" type="hidden" value="" />
+<input id="obj29_enc_response" name="obj029_enc_response" type="hidden" value="" /> <input id="obj29_enc_rt" name="obj029_enc_rt" type="hidden" value="" />
+<input id="obj30_enc_response" name="obj030_enc_response" type="hidden" value="" /> <input id="obj30_enc_rt" name="obj030_enc_rt" type="hidden" value="" />
+<input id="obj31_enc_response" name="obj031_enc_response" type="hidden" value="" /> <input id="obj31_enc_rt" name="obj031_enc_rt" type="hidden" value="" />
+<input id="obj32_enc_response" name="obj032_enc_response" type="hidden" value="" /> <input id="obj32_enc_rt" name="obj032_enc_rt" type="hidden" value="" />
+<input id="obj33_enc_response" name="obj033_enc_response" type="hidden" value="" /> <input id="obj33_enc_rt" name="obj033_enc_rt" type="hidden" value="" />
+<input id="obj34_enc_response" name="obj034_enc_response" type="hidden" value="" /> <input id="obj34_enc_rt" name="obj034_enc_rt" type="hidden" value="" />
+<input id="obj35_enc_response" name="obj035_enc_response" type="hidden" value="" /> <input id="obj35_enc_rt" name="obj035_enc_rt" type="hidden" value="" />
+<input id="obj36_enc_response" name="obj036_enc_response" type="hidden" value="" /> <input id="obj36_enc_rt" name="obj036_enc_rt" type="hidden" value="" />
+<input id="obj37_enc_response" name="obj037_enc_response" type="hidden" value="" /> <input id="obj37_enc_rt" name="obj037_enc_rt" type="hidden" value="" />
+<input id="obj38_enc_response" name="obj038_enc_response" type="hidden" value="" /> <input id="obj38_enc_rt" name="obj038_enc_rt" type="hidden" value="" />
+<input id="obj39_enc_response" name="obj039_enc_response" type="hidden" value="" /> <input id="obj39_enc_rt" name="obj039_enc_rt" type="hidden" value="" />
+<input id="obj40_enc_response" name="obj040_enc_response" type="hidden" value="" /> <input id="obj40_enc_rt" name="obj040_enc_rt" type="hidden" value="" />
+<input id="obj41_enc_response" name="obj041_enc_response" type="hidden" value="" /> <input id="obj41_enc_rt" name="obj041_enc_rt" type="hidden" value="" />
+<input id="obj42_enc_response" name="obj042_enc_response" type="hidden" value="" /> <input id="obj42_enc_rt" name="obj042_enc_rt" type="hidden" value="" />
+<input id="obj43_enc_response" name="obj043_enc_response" type="hidden" value="" /> <input id="obj43_enc_rt" name="obj043_enc_rt" type="hidden" value="" />
+<input id="obj44_enc_response" name="obj044_enc_response" type="hidden" value="" /> <input id="obj44_enc_rt" name="obj044_enc_rt" type="hidden" value="" />
+<input id="obj45_enc_response" name="obj045_enc_response" type="hidden" value="" /> <input id="obj45_enc_rt" name="obj045_enc_rt" type="hidden" value="" />
+<input id="obj46_enc_response" name="obj046_enc_response" type="hidden" value="" /> <input id="obj46_enc_rt" name="obj046_enc_rt" type="hidden" value="" />
+<input id="obj47_enc_response" name="obj047_enc_response" type="hidden" value="" /> <input id="obj47_enc_rt" name="obj047_enc_rt" type="hidden" value="" />
+<input id="obj48_enc_response" name="obj048_enc_response" type="hidden" value="" /> <input id="obj48_enc_rt" name="obj048_enc_rt" type="hidden" value="" />
+<input id="obj49_enc_response" name="obj049_enc_response" type="hidden" value="" /> <input id="obj49_enc_rt" name="obj049_enc_rt" type="hidden" value="" />
+<input id="obj50_enc_response" name="obj050_enc_response" type="hidden" value="" /> <input id="obj50_enc_rt" name="obj050_enc_rt" type="hidden" value="" />
+<input id="obj51_enc_response" name="obj051_enc_response" type="hidden" value="" /> <input id="obj51_enc_rt" name="obj051_enc_rt" type="hidden" value="" />
+<input id="obj52_enc_response" name="obj052_enc_response" type="hidden" value="" /> <input id="obj52_enc_rt" name="obj052_enc_rt" type="hidden" value="" />
+<input id="obj53_enc_response" name="obj053_enc_response" type="hidden" value="" /> <input id="obj53_enc_rt" name="obj053_enc_rt" type="hidden" value="" />
+<input id="obj54_enc_response" name="obj054_enc_response" type="hidden" value="" /> <input id="obj54_enc_rt" name="obj054_enc_rt" type="hidden" value="" />
+<input id="obj55_enc_response" name="obj055_enc_response" type="hidden" value="" /> <input id="obj55_enc_rt" name="obj055_enc_rt" type="hidden" value="" />
+<input id="obj56_enc_response" name="obj056_enc_response" type="hidden" value="" /> <input id="obj56_enc_rt" name="obj056_enc_rt" type="hidden" value="" />
+<input id="obj57_enc_response" name="obj057_enc_response" type="hidden" value="" /> <input id="obj57_enc_rt" name="obj057_enc_rt" type="hidden" value="" />
+<input id="obj58_enc_response" name="obj058_enc_response" type="hidden" value="" /> <input id="obj58_enc_rt" name="obj058_enc_rt" type="hidden" value="" />
+<input id="obj59_enc_response" name="obj059_enc_response" type="hidden" value="" /> <input id="obj59_enc_rt" name="obj059_enc_rt" type="hidden" value="" />
+<input id="obj60_enc_response" name="obj060_enc_response" type="hidden" value="" /> <input id="obj60_enc_rt" name="obj060_enc_rt" type="hidden" value="" />
+<input id="obj61_enc_response" name="obj061_enc_response" type="hidden" value="" /> <input id="obj61_enc_rt" name="obj061_enc_rt" type="hidden" value="" />
+<input id="obj62_enc_response" name="obj062_enc_response" type="hidden" value="" /> <input id="obj62_enc_rt" name="obj062_enc_rt" type="hidden" value="" />
+<input id="obj63_enc_response" name="obj063_enc_response" type="hidden" value="" /> <input id="obj63_enc_rt" name="obj063_enc_rt" type="hidden" value="" />
+<input id="obj64_enc_response" name="obj064_enc_response" type="hidden" value="" /> <input id="obj64_enc_rt" name="obj064_enc_rt" type="hidden" value="" />
+<input id="obj65_enc_response" name="obj065_enc_response" type="hidden" value="" /> <input id="obj65_enc_rt" name="obj065_enc_rt" type="hidden" value="" />
+<input id="obj66_enc_response" name="obj066_enc_response" type="hidden" value="" /> <input id="obj66_enc_rt" name="obj066_enc_rt" type="hidden" value="" />
+<input id="obj67_enc_response" name="obj067_enc_response" type="hidden" value="" /> <input id="obj67_enc_rt" name="obj067_enc_rt" type="hidden" value="" />
+<input id="obj68_enc_response" name="obj068_enc_response" type="hidden" value="" /> <input id="obj68_enc_rt" name="obj068_enc_rt" type="hidden" value="" />
+<input id="obj69_enc_response" name="obj069_enc_response" type="hidden" value="" /> <input id="obj69_enc_rt" name="obj069_enc_rt" type="hidden" value="" />
+<input id="obj70_enc_response" name="obj070_enc_response" type="hidden" value="" /> <input id="obj70_enc_rt" name="obj070_enc_rt" type="hidden" value="" />
+<input id="obj71_enc_response" name="obj071_enc_response" type="hidden" value="" /> <input id="obj71_enc_rt" name="obj071_enc_rt" type="hidden" value="" />
+<input id="obj72_enc_response" name="obj072_enc_response" type="hidden" value="" /> <input id="obj72_enc_rt" name="obj072_enc_rt" type="hidden" value="" />
+<input id="obj73_enc_response" name="obj073_enc_response" type="hidden" value="" /> <input id="obj73_enc_rt" name="obj073_enc_rt" type="hidden" value="" />
+<input id="obj74_enc_response" name="obj074_enc_response" type="hidden" value="" /> <input id="obj74_enc_rt" name="obj074_enc_rt" type="hidden" value="" />
+<input id="obj75_enc_response" name="obj075_enc_response" type="hidden" value="" /> <input id="obj75_enc_rt" name="obj075_enc_rt" type="hidden" value="" />
+<input id="obj76_enc_response" name="obj076_enc_response" type="hidden" value="" /> <input id="obj76_enc_rt" name="obj076_enc_rt" type="hidden" value="" />
+<input id="obj77_enc_response" name="obj077_enc_response" type="hidden" value="" /> <input id="obj77_enc_rt" name="obj077_enc_rt" type="hidden" value="" />
+<input id="obj78_enc_response" name="obj078_enc_response" type="hidden" value="" /> <input id="obj78_enc_rt" name="obj078_enc_rt" type="hidden" value="" />
+<input id="obj79_enc_response" name="obj079_enc_response" type="hidden" value="" /> <input id="obj79_enc_rt" name="obj079_enc_rt" type="hidden" value="" />
+<input id="obj80_enc_response" name="obj080_enc_response" type="hidden" value="" /> <input id="obj80_enc_rt" name="obj080_enc_rt" type="hidden" value="" />
+<input id="obj81_enc_response" name="obj081_enc_response" type="hidden" value="" /> <input id="obj81_enc_rt" name="obj081_enc_rt" type="hidden" value="" />
+<input id="obj82_enc_response" name="obj082_enc_response" type="hidden" value="" /> <input id="obj82_enc_rt" name="obj082_enc_rt" type="hidden" value="" />
+<input id="obj83_enc_response" name="obj083_enc_response" type="hidden" value="" /> <input id="obj83_enc_rt" name="obj083_enc_rt" type="hidden" value="" />
+<input id="obj84_enc_response" name="obj084_enc_response" type="hidden" value="" /> <input id="obj84_enc_rt" name="obj084_enc_rt" type="hidden" value="" />
+<input id="obj85_enc_response" name="obj085_enc_response" type="hidden" value="" /> <input id="obj85_enc_rt" name="obj085_enc_rt" type="hidden" value="" />
+<input id="obj86_enc_response" name="obj086_enc_response" type="hidden" value="" /> <input id="obj86_enc_rt" name="obj086_enc_rt" type="hidden" value="" />
+<input id="obj87_enc_response" name="obj087_enc_response" type="hidden" value="" /> <input id="obj87_enc_rt" name="obj087_enc_rt" type="hidden" value="" />
+<input id="obj88_enc_response" name="obj088_enc_response" type="hidden" value="" /> <input id="obj88_enc_rt" name="obj088_enc_rt" type="hidden" value="" />
+<input id="obj89_enc_response" name="obj089_enc_response" type="hidden" value="" /> <input id="obj89_enc_rt" name="obj089_enc_rt" type="hidden" value="" />
+<input id="obj90_enc_response" name="obj090_enc_response" type="hidden" value="" /> <input id="obj90_enc_rt" name="obj090_enc_rt" type="hidden" value="" />
+<input id="obj91_enc_response" name="obj091_enc_response" type="hidden" value="" /> <input id="obj91_enc_rt" name="obj091_enc_rt" type="hidden" value="" />
+<input id="obj92_enc_response" name="obj092_enc_response" type="hidden" value="" /> <input id="obj92_enc_rt" name="obj092_enc_rt" type="hidden" value="" />
+<input id="obj93_enc_response" name="obj093_enc_response" type="hidden" value="" /> <input id="obj93_enc_rt" name="obj093_enc_rt" type="hidden" value="" />
+<input id="obj94_enc_response" name="obj094_enc_response" type="hidden" value="" /> <input id="obj94_enc_rt" name="obj094_enc_rt" type="hidden" value="" />
+<input id="obj95_enc_response" name="obj095_enc_response" type="hidden" value="" /> <input id="obj95_enc_rt" name="obj095_enc_rt" type="hidden" value="" />
+<input id="obj96_enc_response" name="obj096_enc_response" type="hidden" value="" /> <input id="obj96_enc_rt" name="obj096_enc_rt" type="hidden" value="" />
+<input id="obj97_enc_response" name="obj097_enc_response" type="hidden" value="" /> <input id="obj97_enc_rt" name="obj097_enc_rt" type="hidden" value="" />
+<input id="obj98_enc_response" name="obj098_enc_response" type="hidden" value="" /> <input id="obj98_enc_rt" name="obj098_enc_rt" type="hidden" value="" />
+<input id="obj99_enc_response" name="obj099_enc_response" type="hidden" value="" /> <input id="obj99_enc_rt" name="obj099_enc_rt" type="hidden" value="" />
+<input id="obj100_enc_response" name="obj100_enc_response" type="hidden" value="" /> <input id="obj100_enc_rt" name="obj100_enc_rt" type="hidden" value="" />
+<input id="obj101_enc_response" name="obj101_enc_response" type="hidden" value="" /> <input id="obj101_enc_rt" name="obj101_enc_rt" type="hidden" value="" />
+<input id="obj102_enc_response" name="obj102_enc_response" type="hidden" value="" /> <input id="obj102_enc_rt" name="obj102_enc_rt" type="hidden" value="" />
+<input id="obj103_enc_response" name="obj103_enc_response" type="hidden" value="" /> <input id="obj103_enc_rt" name="obj103_enc_rt" type="hidden" value="" />
+<input id="obj104_enc_response" name="obj104_enc_response" type="hidden" value="" /> <input id="obj104_enc_rt" name="obj104_enc_rt" type="hidden" value="" />
+<input id="obj105_enc_response" name="obj105_enc_response" type="hidden" value="" /> <input id="obj105_enc_rt" name="obj105_enc_rt" type="hidden" value="" />
+<input id="obj106_enc_response" name="obj106_enc_response" type="hidden" value="" /> <input id="obj106_enc_rt" name="obj106_enc_rt" type="hidden" value="" />
+<input id="obj107_enc_response" name="obj107_enc_response" type="hidden" value="" /> <input id="obj107_enc_rt" name="obj107_enc_rt" type="hidden" value="" />
+<input id="obj108_enc_response" name="obj108_enc_response" type="hidden" value="" /> <input id="obj108_enc_rt" name="obj108_enc_rt" type="hidden" value="" />
+<input id="obj109_enc_response" name="obj109_enc_response" type="hidden" value="" /> <input id="obj109_enc_rt" name="obj109_enc_rt" type="hidden" value="" />
+<input id="obj110_enc_response" name="obj110_enc_response" type="hidden" value="" /> <input id="obj110_enc_rt" name="obj110_enc_rt" type="hidden" value="" />
+<input id="obj111_enc_response" name="obj111_enc_response" type="hidden" value="" /> <input id="obj111_enc_rt" name="obj111_enc_rt" type="hidden" value="" />
+<input id="obj112_enc_response" name="obj112_enc_response" type="hidden" value="" /> <input id="obj112_enc_rt" name="obj112_enc_rt" type="hidden" value="" />
+<input id="obj113_enc_response" name="obj113_enc_response" type="hidden" value="" /> <input id="obj113_enc_rt" name="obj113_enc_rt" type="hidden" value="" />
+<input id="obj114_enc_response" name="obj114_enc_response" type="hidden" value="" /> <input id="obj114_enc_rt" name="obj114_enc_rt" type="hidden" value="" />
+<input id="obj115_enc_response" name="obj115_enc_response" type="hidden" value="" /> <input id="obj115_enc_rt" name="obj115_enc_rt" type="hidden" value="" />
+<input id="obj116_enc_response" name="obj116_enc_response" type="hidden" value="" /> <input id="obj116_enc_rt" name="obj116_enc_rt" type="hidden" value="" />
+<input id="obj117_enc_response" name="obj117_enc_response" type="hidden" value="" /> <input id="obj117_enc_rt" name="obj117_enc_rt" type="hidden" value="" />
+<input id="obj118_enc_response" name="obj118_enc_response" type="hidden" value="" /> <input id="obj118_enc_rt" name="obj118_enc_rt" type="hidden" value="" />
+<input id="obj119_enc_response" name="obj119_enc_response" type="hidden" value="" /> <input id="obj119_enc_rt" name="obj119_enc_rt" type="hidden" value="" />
+<input id="obj120_enc_response" name="obj120_enc_response" type="hidden" value="" /> <input id="obj120_enc_rt" name="obj120_enc_rt" type="hidden" value="" />
+<input id="obj121_enc_response" name="obj121_enc_response" type="hidden" value="" /> <input id="obj121_enc_rt" name="obj121_enc_rt" type="hidden" value="" />
+<input id="obj122_enc_response" name="obj122_enc_response" type="hidden" value="" /> <input id="obj122_enc_rt" name="obj122_enc_rt" type="hidden" value="" />
+<input id="obj123_enc_response" name="obj123_enc_response" type="hidden" value="" /> <input id="obj123_enc_rt" name="obj123_enc_rt" type="hidden" value="" />
+<input id="obj124_enc_response" name="obj124_enc_response" type="hidden" value="" /> <input id="obj124_enc_rt" name="obj124_enc_rt" type="hidden" value="" />
+<input id="obj125_enc_response" name="obj125_enc_response" type="hidden" value="" /> <input id="obj125_enc_rt" name="obj125_enc_rt" type="hidden" value="" />
+<input id="obj126_enc_response" name="obj126_enc_response" type="hidden" value="" /> <input id="obj126_enc_rt" name="obj126_enc_rt" type="hidden" value="" />
+<input id="obj127_enc_response" name="obj127_enc_response" type="hidden" value="" /> <input id="obj127_enc_rt" name="obj127_enc_rt" type="hidden" value="" />
+<input id="obj128_enc_response" name="obj128_enc_response" type="hidden" value="" /> <input id="obj128_enc_rt" name="obj128_enc_rt" type="hidden" value="" />
+<input id="obj129_enc_response" name="obj129_enc_response" type="hidden" value="" /> <input id="obj129_enc_rt" name="obj129_enc_rt" type="hidden" value="" />
+<input id="obj130_enc_response" name="obj130_enc_response" type="hidden" value="" /> <input id="obj130_enc_rt" name="obj130_enc_rt" type="hidden" value="" />
+<input id="obj131_enc_response" name="obj131_enc_response" type="hidden" value="" /> <input id="obj131_enc_rt" name="obj131_enc_rt" type="hidden" value="" />
+<input id="obj132_enc_response" name="obj132_enc_response" type="hidden" value="" /> <input id="obj132_enc_rt" name="obj132_enc_rt" type="hidden" value="" />
+<input id="obj133_enc_response" name="obj133_enc_response" type="hidden" value="" /> <input id="obj133_enc_rt" name="obj133_enc_rt" type="hidden" value="" />
+<input id="obj134_enc_response" name="obj134_enc_response" type="hidden" value="" /> <input id="obj134_enc_rt" name="obj134_enc_rt" type="hidden" value="" />
+
+
+</div>
+
+<!--Retrieval Experiment Div-->
+<div id="experimentRetrieval">
+<br><br>
+<img class="displays" id="Fixation2" name="fixationX" src="https://raw.githubusercontent.com/FugaDeng/misc/main/tmpfolder/fixationX.jpg">
+<!--Retrieval Stimulus (labels) presentation-->
+<p class="retWordCue" id="obj0_ret_word_stim"><b>bridge</b></p>
+<p class="retWordCue" id="obj1_ret_word_stim"><b>slingshot</b></p>
+<p class="retWordCue" id="obj2_ret_word_stim"><b>kayak</b></p>
+<p class="retWordCue" id="obj3_ret_word_stim"><b>finger</b></p>
+<p class="retWordCue" id="obj4_ret_word_stim"><b>bloodhound</b></p>
+<p class="retWordCue" id="obj5_ret_word_stim"><b>microphone</b></p>
+<p class="retWordCue" id="obj6_ret_word_stim"><b>yarn</b></p>
+<p class="retWordCue" id="obj7_ret_word_stim"><b>walker</b></p>
+<p class="retWordCue" id="obj8_ret_word_stim"><b>cello</b></p>
+<p class="retWordCue" id="obj9_ret_word_stim"><b>scale</b></p>
+<p class="retWordCue" id="obj10_ret_word_stim"><b>shark</b></p>
+<p class="retWordCue" id="obj11_ret_word_stim"><b>donut</b></p>
+<p class="retWordCue" id="obj12_ret_word_stim"><b>pen</b></p>
+<p class="retWordCue" id="obj13_ret_word_stim"><b>lawnmower</b></p>
+<p class="retWordCue" id="obj14_ret_word_stim"><b>sock</b></p>
+<p class="retWordCue" id="obj15_ret_word_stim"><b>avocado</b></p>
+<p class="retWordCue" id="obj16_ret_word_stim"><b>aqueduct</b></p>
+<p class="retWordCue" id="obj17_ret_word_stim"><b>piano</b></p>
+<p class="retWordCue" id="obj18_ret_word_stim"><b>blouse</b></p>
+<p class="retWordCue" id="obj19_ret_word_stim"><b>tire</b></p>
+<p class="retWordCue" id="obj20_ret_word_stim"><b>revolver</b></p>
+<p class="retWordCue" id="obj21_ret_word_stim"><b>headphone</b></p>
+<p class="retWordCue" id="obj22_ret_word_stim"><b>ring</b></p>
+<p class="retWordCue" id="obj23_ret_word_stim"><b>coffin</b></p>
+<p class="retWordCue" id="obj24_ret_word_stim"><b>cooler</b></p>
+<p class="retWordCue" id="obj25_ret_word_stim"><b>camera</b></p>
+<p class="retWordCue" id="obj26_ret_word_stim"><b>ostrich</b></p>
+<p class="retWordCue" id="obj27_ret_word_stim"><b>baby seat</b></p>
+<p class="retWordCue" id="obj28_ret_word_stim"><b>peacock</b></p>
+<p class="retWordCue" id="obj29_ret_word_stim"><b>sailboat</b></p>
+<p class="retWordCue" id="obj30_ret_word_stim"><b>loofah</b></p>
+<p class="retWordCue" id="obj31_ret_word_stim"><b>beret</b></p>
+<p class="retWordCue" id="obj32_ret_word_stim"><b>compass</b></p>
+<p class="retWordCue" id="obj33_ret_word_stim"><b>purse</b></p>
+<p class="retWordCue" id="obj34_ret_word_stim"><b>television</b></p>
+<p class="retWordCue" id="obj35_ret_word_stim"><b>polaroid</b></p>
+<p class="retWordCue" id="obj36_ret_word_stim"><b>eggplant</b></p>
+<p class="retWordCue" id="obj37_ret_word_stim"><b>dart</b></p>
+<p class="retWordCue" id="obj38_ret_word_stim"><b>couch</b></p>
+<p class="retWordCue" id="obj39_ret_word_stim"><b>yoyo</b></p>
+<p class="retWordCue" id="obj40_ret_word_stim"><b>mixer</b></p>
+<p class="retWordCue" id="obj41_ret_word_stim"><b>flag</b></p>
+<p class="retWordCue" id="obj42_ret_word_stim"><b>handbell</b></p>
+<p class="retWordCue" id="obj43_ret_word_stim"><b>planet</b></p>
+<p class="retWordCue" id="obj44_ret_word_stim"><b>helicopter</b></p>
+<p class="retWordCue" id="obj45_ret_word_stim"><b>chipmunk</b></p>
+<p class="retWordCue" id="obj46_ret_word_stim"><b>bell</b></p>
+<p class="retWordCue" id="obj47_ret_word_stim"><b>armoire</b></p>
+<p class="retWordCue" id="obj48_ret_word_stim"><b>clarinet</b></p>
+<p class="retWordCue" id="obj49_ret_word_stim"><b>headdress</b></p>
+<p class="retWordCue" id="obj50_ret_word_stim"><b>bass</b></p>
+<p class="retWordCue" id="obj51_ret_word_stim"><b>rifle</b></p>
+<p class="retWordCue" id="obj52_ret_word_stim"><b>mushroom</b></p>
+<p class="retWordCue" id="obj53_ret_word_stim"><b>church</b></p>
+<p class="retWordCue" id="obj54_ret_word_stim"><b>butter</b></p>
+<p class="retWordCue" id="obj55_ret_word_stim"><b>shirt</b></p>
+<p class="retWordCue" id="obj56_ret_word_stim"><b>rice</b></p>
+<p class="retWordCue" id="obj57_ret_word_stim"><b>knife</b></p>
+<p class="retWordCue" id="obj58_ret_word_stim"><b>radio</b></p>
+<p class="retWordCue" id="obj59_ret_word_stim"><b>trolley</b></p>
+<p class="retWordCue" id="obj60_ret_word_stim"><b>periscope</b></p>
+<p class="retWordCue" id="obj61_ret_word_stim"><b>tombstone</b></p>
+<p class="retWordCue" id="obj62_ret_word_stim"><b>coral</b></p>
+<p class="retWordCue" id="obj63_ret_word_stim"><b>swimsuit</b></p>
+<p class="retWordCue" id="obj64_ret_word_stim"><b>bull</b></p>
+<p class="retWordCue" id="obj65_ret_word_stim"><b>wreath</b></p>
+<p class="retWordCue" id="obj66_ret_word_stim"><b>whip</b></p>
+<p class="retWordCue" id="obj67_ret_word_stim"><b>tuba</b></p>
+<p class="retWordCue" id="obj68_ret_word_stim"><b>pig</b></p>
+<p class="retWordCue" id="obj69_ret_word_stim"><b>stepladder</b></p>
+<p class="retWordCue" id="obj70_ret_word_stim"><b>pants</b></p>
+<p class="retWordCue" id="obj71_ret_word_stim"><b>robin</b></p>
+<p class="retWordCue" id="obj72_ret_word_stim"><b>hairdryer</b></p>
+<p class="retWordCue" id="obj73_ret_word_stim"><b>rhinoceros</b></p>
+<p class="retWordCue" id="obj74_ret_word_stim"><b>tent</b></p>
+<p class="retWordCue" id="obj75_ret_word_stim"><b>melon</b></p>
+<p class="retWordCue" id="obj76_ret_word_stim"><b>globe</b></p>
+<p class="retWordCue" id="obj77_ret_word_stim"><b>flashlight</b></p>
+<p class="retWordCue" id="obj78_ret_word_stim"><b>road</b></p>
+<p class="retWordCue" id="obj79_ret_word_stim"><b>pineapple</b></p>
+<p class="retWordCue" id="obj80_ret_word_stim"><b>boombox</b></p>
+<p class="retWordCue" id="obj81_ret_word_stim"><b>crate</b></p>
+<p class="retWordCue" id="obj82_ret_word_stim"><b>fez</b></p>
+<p class="retWordCue" id="obj83_ret_word_stim"><b>trombone</b></p>
+<p class="retWordCue" id="obj84_ret_word_stim"><b>toucan</b></p>
+<p class="retWordCue" id="obj85_ret_word_stim"><b>bleachers</b></p>
+<p class="retWordCue" id="obj86_ret_word_stim"><b>battery</b></p>
+<p class="retWordCue" id="obj87_ret_word_stim"><b>galleon</b></p>
+<p class="retWordCue" id="obj88_ret_word_stim"><b>shovel</b></p>
+<p class="retWordCue" id="obj89_ret_word_stim"><b>cow</b></p>
+<p class="retWordCue" id="obj90_ret_word_stim"><b>tricycle</b></p>
+<p class="retWordCue" id="obj91_ret_word_stim"><b>blender</b></p>
+<p class="retWordCue" id="obj92_ret_word_stim"><b>column</b></p>
+<p class="retWordCue" id="obj93_ret_word_stim"><b>watermelon</b></p>
+<p class="retWordCue" id="obj94_ret_word_stim"><b>shoelace</b></p>
+<p class="retWordCue" id="obj95_ret_word_stim"><b>biplane</b></p>
+<p class="retWordCue" id="obj96_ret_word_stim"><b>cane</b></p>
+<p class="retWordCue" id="obj97_ret_word_stim"><b>ray</b></p>
+<p class="retWordCue" id="obj98_ret_word_stim"><b>bobber</b></p>
+<p class="retWordCue" id="obj99_ret_word_stim"><b>tank top</b></p>
+<p class="retWordCue" id="obj100_ret_word_stim"><b>keg</b></p>
+<p class="retWordCue" id="obj101_ret_word_stim"><b>yacht</b></p>
+<p class="retWordCue" id="obj102_ret_word_stim"><b>ladybug</b></p>
+<p class="retWordCue" id="obj103_ret_word_stim"><b>dustpan</b></p>
+<p class="retWordCue" id="obj104_ret_word_stim"><b>door</b></p>
+<p class="retWordCue" id="obj105_ret_word_stim"><b>mitten</b></p>
+<p class="retWordCue" id="obj106_ret_word_stim"><b>cabin</b></p>
+<p class="retWordCue" id="obj107_ret_word_stim"><b>arrow</b></p>
+<p class="retWordCue" id="obj108_ret_word_stim"><b>vase</b></p>
+<p class="retWordCue" id="obj109_ret_word_stim"><b>seagull</b></p>
+<p class="retWordCue" id="obj110_ret_word_stim"><b>ski</b></p>
+<p class="retWordCue" id="obj111_ret_word_stim"><b>thermos</b></p>
+<p class="retWordCue" id="obj112_ret_word_stim"><b>snail</b></p>
+<p class="retWordCue" id="obj113_ret_word_stim"><b>fishtank</b></p>
+<p class="retWordCue" id="obj114_ret_word_stim"><b>push pin</b></p>
+<p class="retWordCue" id="obj115_ret_word_stim"><b>almond</b></p>
+<p class="retWordCue" id="obj116_ret_word_stim"><b>wetsuit</b></p>
+<p class="retWordCue" id="obj117_ret_word_stim"><b>barn</b></p>
+<p class="retWordCue" id="obj118_ret_word_stim"><b>axe</b></p>
+<p class="retWordCue" id="obj119_ret_word_stim"><b>sunglasses</b></p>
+<p class="retWordCue" id="obj120_ret_word_stim"><b>throne</b></p>
+<p class="retWordCue" id="obj121_ret_word_stim"><b>holly</b></p>
+<p class="retWordCue" id="obj122_ret_word_stim"><b>corkscrew</b></p>
+<p class="retWordCue" id="obj123_ret_word_stim"><b>cap</b></p>
+<p class="retWordCue" id="obj124_ret_word_stim"><b>snowglobe</b></p>
+<p class="retWordCue" id="obj125_ret_word_stim"><b>motorboat</b></p>
+<p class="retWordCue" id="obj126_ret_word_stim"><b>q-tip</b></p>
+<p class="retWordCue" id="obj127_ret_word_stim"><b>hand</b></p>
+<p class="retWordCue" id="obj128_ret_word_stim"><b>hearse</b></p>
+<p class="retWordCue" id="obj129_ret_word_stim"><b>organ</b></p>
+<p class="retWordCue" id="obj130_ret_word_stim"><b>tractor</b></p>
+<p class="retWordCue" id="obj131_ret_word_stim"><b>beagle</b></p>
+<p class="retWordCue" id="obj132_ret_word_stim"><b>mug</b></p>
+<p class="retWordCue" id="obj133_ret_word_stim"><b>tongue</b></p>
+<p class="retWordCue" id="obj134_ret_word_stim"><b>headband</b></p>
+<p class="retWordCue" id="obj135_ret_word_stim"><b>moose</b></p>
+<p class="retWordCue" id="obj136_ret_word_stim"><b>easel</b></p>
+<p class="retWordCue" id="obj137_ret_word_stim"><b>fish</b></p>
+<p class="retWordCue" id="obj138_ret_word_stim"><b>wrist</b></p>
+<p class="retWordCue" id="obj139_ret_word_stim"><b>deer</b></p>
+<p class="retWordCue" id="obj140_ret_word_stim"><b>hourglass</b></p>
+<p class="retWordCue" id="obj141_ret_word_stim"><b>rug</b></p>
+<p class="retWordCue" id="obj142_ret_word_stim"><b>pear</b></p>
+<p class="retWordCue" id="obj143_ret_word_stim"><b>pumpkin</b></p>
+<p class="retWordCue" id="obj144_ret_word_stim"><b>pail</b></p>
+<p class="retWordCue" id="obj145_ret_word_stim"><b>oyster</b></p>
+<p class="retWordCue" id="obj146_ret_word_stim"><b>doghouse</b></p>
+<p class="retWordCue" id="obj147_ret_word_stim"><b>mango</b></p>
+<p class="retWordCue" id="obj148_ret_word_stim"><b>papaya</b></p>
+<p class="retWordCue" id="obj149_ret_word_stim"><b>booties</b></p>
+
+<!--Pictures and Words-->
+
+<p id="retRespFeedback"> - - - - </p>
+<pre id="retRespCues"><br><br><b> Def. New-4   5   6   7-Def. Old </b></pre>
+
+
+
+
+<!--Retrieval Inputs -->
+
+<input id="obj0_ret_word_response" name="obj000_ret_word_response" type="hidden" value="" /> <input id="obj0_ret_word_rt" name="obj000_ret_word_rt" type="hidden" value="" />
+<input id="obj1_ret_word_response" name="obj001_ret_word_response" type="hidden" value="" /> <input id="obj1_ret_word_rt" name="obj001_ret_word_rt" type="hidden" value="" />
+<input id="obj2_ret_word_response" name="obj002_ret_word_response" type="hidden" value="" /> <input id="obj2_ret_word_rt" name="obj002_ret_word_rt" type="hidden" value="" />
+<input id="obj3_ret_word_response" name="obj003_ret_word_response" type="hidden" value="" /> <input id="obj3_ret_word_rt" name="obj003_ret_word_rt" type="hidden" value="" />
+<input id="obj4_ret_word_response" name="obj004_ret_word_response" type="hidden" value="" /> <input id="obj4_ret_word_rt" name="obj004_ret_word_rt" type="hidden" value="" />
+<input id="obj5_ret_word_response" name="obj005_ret_word_response" type="hidden" value="" /> <input id="obj5_ret_word_rt" name="obj005_ret_word_rt" type="hidden" value="" />
+<input id="obj6_ret_word_response" name="obj006_ret_word_response" type="hidden" value="" /> <input id="obj6_ret_word_rt" name="obj006_ret_word_rt" type="hidden" value="" />
+<input id="obj7_ret_word_response" name="obj007_ret_word_response" type="hidden" value="" /> <input id="obj7_ret_word_rt" name="obj007_ret_word_rt" type="hidden" value="" />
+<input id="obj8_ret_word_response" name="obj008_ret_word_response" type="hidden" value="" /> <input id="obj8_ret_word_rt" name="obj008_ret_word_rt" type="hidden" value="" />
+<input id="obj9_ret_word_response" name="obj009_ret_word_response" type="hidden" value="" /> <input id="obj9_ret_word_rt" name="obj009_ret_word_rt" type="hidden" value="" />
+<input id="obj10_ret_word_response" name="obj010_ret_word_response" type="hidden" value="" /> <input id="obj10_ret_word_rt" name="obj010_ret_word_rt" type="hidden" value="" />
+<input id="obj11_ret_word_response" name="obj011_ret_word_response" type="hidden" value="" /> <input id="obj11_ret_word_rt" name="obj011_ret_word_rt" type="hidden" value="" />
+<input id="obj12_ret_word_response" name="obj012_ret_word_response" type="hidden" value="" /> <input id="obj12_ret_word_rt" name="obj012_ret_word_rt" type="hidden" value="" />
+<input id="obj13_ret_word_response" name="obj013_ret_word_response" type="hidden" value="" /> <input id="obj13_ret_word_rt" name="obj013_ret_word_rt" type="hidden" value="" />
+<input id="obj14_ret_word_response" name="obj014_ret_word_response" type="hidden" value="" /> <input id="obj14_ret_word_rt" name="obj014_ret_word_rt" type="hidden" value="" />
+<input id="obj15_ret_word_response" name="obj015_ret_word_response" type="hidden" value="" /> <input id="obj15_ret_word_rt" name="obj015_ret_word_rt" type="hidden" value="" />
+<input id="obj16_ret_word_response" name="obj016_ret_word_response" type="hidden" value="" /> <input id="obj16_ret_word_rt" name="obj016_ret_word_rt" type="hidden" value="" />
+<input id="obj17_ret_word_response" name="obj017_ret_word_response" type="hidden" value="" /> <input id="obj17_ret_word_rt" name="obj017_ret_word_rt" type="hidden" value="" />
+<input id="obj18_ret_word_response" name="obj018_ret_word_response" type="hidden" value="" /> <input id="obj18_ret_word_rt" name="obj018_ret_word_rt" type="hidden" value="" />
+<input id="obj19_ret_word_response" name="obj019_ret_word_response" type="hidden" value="" /> <input id="obj19_ret_word_rt" name="obj019_ret_word_rt" type="hidden" value="" />
+<input id="obj20_ret_word_response" name="obj020_ret_word_response" type="hidden" value="" /> <input id="obj20_ret_word_rt" name="obj020_ret_word_rt" type="hidden" value="" />
+<input id="obj21_ret_word_response" name="obj021_ret_word_response" type="hidden" value="" /> <input id="obj21_ret_word_rt" name="obj021_ret_word_rt" type="hidden" value="" />
+<input id="obj22_ret_word_response" name="obj022_ret_word_response" type="hidden" value="" /> <input id="obj22_ret_word_rt" name="obj022_ret_word_rt" type="hidden" value="" />
+<input id="obj23_ret_word_response" name="obj023_ret_word_response" type="hidden" value="" /> <input id="obj23_ret_word_rt" name="obj023_ret_word_rt" type="hidden" value="" />
+<input id="obj24_ret_word_response" name="obj024_ret_word_response" type="hidden" value="" /> <input id="obj24_ret_word_rt" name="obj024_ret_word_rt" type="hidden" value="" />
+<input id="obj25_ret_word_response" name="obj025_ret_word_response" type="hidden" value="" /> <input id="obj25_ret_word_rt" name="obj025_ret_word_rt" type="hidden" value="" />
+<input id="obj26_ret_word_response" name="obj026_ret_word_response" type="hidden" value="" /> <input id="obj26_ret_word_rt" name="obj026_ret_word_rt" type="hidden" value="" />
+<input id="obj27_ret_word_response" name="obj027_ret_word_response" type="hidden" value="" /> <input id="obj27_ret_word_rt" name="obj027_ret_word_rt" type="hidden" value="" />
+<input id="obj28_ret_word_response" name="obj028_ret_word_response" type="hidden" value="" /> <input id="obj28_ret_word_rt" name="obj028_ret_word_rt" type="hidden" value="" />
+<input id="obj29_ret_word_response" name="obj029_ret_word_response" type="hidden" value="" /> <input id="obj29_ret_word_rt" name="obj029_ret_word_rt" type="hidden" value="" />
+<input id="obj30_ret_word_response" name="obj030_ret_word_response" type="hidden" value="" /> <input id="obj30_ret_word_rt" name="obj030_ret_word_rt" type="hidden" value="" />
+<input id="obj31_ret_word_response" name="obj031_ret_word_response" type="hidden" value="" /> <input id="obj31_ret_word_rt" name="obj031_ret_word_rt" type="hidden" value="" />
+<input id="obj32_ret_word_response" name="obj032_ret_word_response" type="hidden" value="" /> <input id="obj32_ret_word_rt" name="obj032_ret_word_rt" type="hidden" value="" />
+<input id="obj33_ret_word_response" name="obj033_ret_word_response" type="hidden" value="" /> <input id="obj33_ret_word_rt" name="obj033_ret_word_rt" type="hidden" value="" />
+<input id="obj34_ret_word_response" name="obj034_ret_word_response" type="hidden" value="" /> <input id="obj34_ret_word_rt" name="obj034_ret_word_rt" type="hidden" value="" />
+<input id="obj35_ret_word_response" name="obj035_ret_word_response" type="hidden" value="" /> <input id="obj35_ret_word_rt" name="obj035_ret_word_rt" type="hidden" value="" />
+<input id="obj36_ret_word_response" name="obj036_ret_word_response" type="hidden" value="" /> <input id="obj36_ret_word_rt" name="obj036_ret_word_rt" type="hidden" value="" />
+<input id="obj37_ret_word_response" name="obj037_ret_word_response" type="hidden" value="" /> <input id="obj37_ret_word_rt" name="obj037_ret_word_rt" type="hidden" value="" />
+<input id="obj38_ret_word_response" name="obj038_ret_word_response" type="hidden" value="" /> <input id="obj38_ret_word_rt" name="obj038_ret_word_rt" type="hidden" value="" />
+<input id="obj39_ret_word_response" name="obj039_ret_word_response" type="hidden" value="" /> <input id="obj39_ret_word_rt" name="obj039_ret_word_rt" type="hidden" value="" />
+<input id="obj40_ret_word_response" name="obj040_ret_word_response" type="hidden" value="" /> <input id="obj40_ret_word_rt" name="obj040_ret_word_rt" type="hidden" value="" />
+<input id="obj41_ret_word_response" name="obj041_ret_word_response" type="hidden" value="" /> <input id="obj41_ret_word_rt" name="obj041_ret_word_rt" type="hidden" value="" />
+<input id="obj42_ret_word_response" name="obj042_ret_word_response" type="hidden" value="" /> <input id="obj42_ret_word_rt" name="obj042_ret_word_rt" type="hidden" value="" />
+<input id="obj43_ret_word_response" name="obj043_ret_word_response" type="hidden" value="" /> <input id="obj43_ret_word_rt" name="obj043_ret_word_rt" type="hidden" value="" />
+<input id="obj44_ret_word_response" name="obj044_ret_word_response" type="hidden" value="" /> <input id="obj44_ret_word_rt" name="obj044_ret_word_rt" type="hidden" value="" />
+<input id="obj45_ret_word_response" name="obj045_ret_word_response" type="hidden" value="" /> <input id="obj45_ret_word_rt" name="obj045_ret_word_rt" type="hidden" value="" />
+<input id="obj46_ret_word_response" name="obj046_ret_word_response" type="hidden" value="" /> <input id="obj46_ret_word_rt" name="obj046_ret_word_rt" type="hidden" value="" />
+<input id="obj47_ret_word_response" name="obj047_ret_word_response" type="hidden" value="" /> <input id="obj47_ret_word_rt" name="obj047_ret_word_rt" type="hidden" value="" />
+<input id="obj48_ret_word_response" name="obj048_ret_word_response" type="hidden" value="" /> <input id="obj48_ret_word_rt" name="obj048_ret_word_rt" type="hidden" value="" />
+<input id="obj49_ret_word_response" name="obj049_ret_word_response" type="hidden" value="" /> <input id="obj49_ret_word_rt" name="obj049_ret_word_rt" type="hidden" value="" />
+<input id="obj50_ret_word_response" name="obj050_ret_word_response" type="hidden" value="" /> <input id="obj50_ret_word_rt" name="obj050_ret_word_rt" type="hidden" value="" />
+<input id="obj51_ret_word_response" name="obj051_ret_word_response" type="hidden" value="" /> <input id="obj51_ret_word_rt" name="obj051_ret_word_rt" type="hidden" value="" />
+<input id="obj52_ret_word_response" name="obj052_ret_word_response" type="hidden" value="" /> <input id="obj52_ret_word_rt" name="obj052_ret_word_rt" type="hidden" value="" />
+<input id="obj53_ret_word_response" name="obj053_ret_word_response" type="hidden" value="" /> <input id="obj53_ret_word_rt" name="obj053_ret_word_rt" type="hidden" value="" />
+<input id="obj54_ret_word_response" name="obj054_ret_word_response" type="hidden" value="" /> <input id="obj54_ret_word_rt" name="obj054_ret_word_rt" type="hidden" value="" />
+<input id="obj55_ret_word_response" name="obj055_ret_word_response" type="hidden" value="" /> <input id="obj55_ret_word_rt" name="obj055_ret_word_rt" type="hidden" value="" />
+<input id="obj56_ret_word_response" name="obj056_ret_word_response" type="hidden" value="" /> <input id="obj56_ret_word_rt" name="obj056_ret_word_rt" type="hidden" value="" />
+<input id="obj57_ret_word_response" name="obj057_ret_word_response" type="hidden" value="" /> <input id="obj57_ret_word_rt" name="obj057_ret_word_rt" type="hidden" value="" />
+<input id="obj58_ret_word_response" name="obj058_ret_word_response" type="hidden" value="" /> <input id="obj58_ret_word_rt" name="obj058_ret_word_rt" type="hidden" value="" />
+<input id="obj59_ret_word_response" name="obj059_ret_word_response" type="hidden" value="" /> <input id="obj59_ret_word_rt" name="obj059_ret_word_rt" type="hidden" value="" />
+<input id="obj60_ret_word_response" name="obj060_ret_word_response" type="hidden" value="" /> <input id="obj60_ret_word_rt" name="obj060_ret_word_rt" type="hidden" value="" />
+<input id="obj61_ret_word_response" name="obj061_ret_word_response" type="hidden" value="" /> <input id="obj61_ret_word_rt" name="obj061_ret_word_rt" type="hidden" value="" />
+<input id="obj62_ret_word_response" name="obj062_ret_word_response" type="hidden" value="" /> <input id="obj62_ret_word_rt" name="obj062_ret_word_rt" type="hidden" value="" />
+<input id="obj63_ret_word_response" name="obj063_ret_word_response" type="hidden" value="" /> <input id="obj63_ret_word_rt" name="obj063_ret_word_rt" type="hidden" value="" />
+<input id="obj64_ret_word_response" name="obj064_ret_word_response" type="hidden" value="" /> <input id="obj64_ret_word_rt" name="obj064_ret_word_rt" type="hidden" value="" />
+<input id="obj65_ret_word_response" name="obj065_ret_word_response" type="hidden" value="" /> <input id="obj65_ret_word_rt" name="obj065_ret_word_rt" type="hidden" value="" />
+<input id="obj66_ret_word_response" name="obj066_ret_word_response" type="hidden" value="" /> <input id="obj66_ret_word_rt" name="obj066_ret_word_rt" type="hidden" value="" />
+<input id="obj67_ret_word_response" name="obj067_ret_word_response" type="hidden" value="" /> <input id="obj67_ret_word_rt" name="obj067_ret_word_rt" type="hidden" value="" />
+<input id="obj68_ret_word_response" name="obj068_ret_word_response" type="hidden" value="" /> <input id="obj68_ret_word_rt" name="obj068_ret_word_rt" type="hidden" value="" />
+<input id="obj69_ret_word_response" name="obj069_ret_word_response" type="hidden" value="" /> <input id="obj69_ret_word_rt" name="obj069_ret_word_rt" type="hidden" value="" />
+<input id="obj70_ret_word_response" name="obj070_ret_word_response" type="hidden" value="" /> <input id="obj70_ret_word_rt" name="obj070_ret_word_rt" type="hidden" value="" />
+<input id="obj71_ret_word_response" name="obj071_ret_word_response" type="hidden" value="" /> <input id="obj71_ret_word_rt" name="obj071_ret_word_rt" type="hidden" value="" />
+<input id="obj72_ret_word_response" name="obj072_ret_word_response" type="hidden" value="" /> <input id="obj72_ret_word_rt" name="obj072_ret_word_rt" type="hidden" value="" />
+<input id="obj73_ret_word_response" name="obj073_ret_word_response" type="hidden" value="" /> <input id="obj73_ret_word_rt" name="obj073_ret_word_rt" type="hidden" value="" />
+<input id="obj74_ret_word_response" name="obj074_ret_word_response" type="hidden" value="" /> <input id="obj74_ret_word_rt" name="obj074_ret_word_rt" type="hidden" value="" />
+<input id="obj75_ret_word_response" name="obj075_ret_word_response" type="hidden" value="" /> <input id="obj75_ret_word_rt" name="obj075_ret_word_rt" type="hidden" value="" />
+<input id="obj76_ret_word_response" name="obj076_ret_word_response" type="hidden" value="" /> <input id="obj76_ret_word_rt" name="obj076_ret_word_rt" type="hidden" value="" />
+<input id="obj77_ret_word_response" name="obj077_ret_word_response" type="hidden" value="" /> <input id="obj77_ret_word_rt" name="obj077_ret_word_rt" type="hidden" value="" />
+<input id="obj78_ret_word_response" name="obj078_ret_word_response" type="hidden" value="" /> <input id="obj78_ret_word_rt" name="obj078_ret_word_rt" type="hidden" value="" />
+<input id="obj79_ret_word_response" name="obj079_ret_word_response" type="hidden" value="" /> <input id="obj79_ret_word_rt" name="obj079_ret_word_rt" type="hidden" value="" />
+<input id="obj80_ret_word_response" name="obj080_ret_word_response" type="hidden" value="" /> <input id="obj80_ret_word_rt" name="obj080_ret_word_rt" type="hidden" value="" />
+<input id="obj81_ret_word_response" name="obj081_ret_word_response" type="hidden" value="" /> <input id="obj81_ret_word_rt" name="obj081_ret_word_rt" type="hidden" value="" />
+<input id="obj82_ret_word_response" name="obj082_ret_word_response" type="hidden" value="" /> <input id="obj82_ret_word_rt" name="obj082_ret_word_rt" type="hidden" value="" />
+<input id="obj83_ret_word_response" name="obj083_ret_word_response" type="hidden" value="" /> <input id="obj83_ret_word_rt" name="obj083_ret_word_rt" type="hidden" value="" />
+<input id="obj84_ret_word_response" name="obj084_ret_word_response" type="hidden" value="" /> <input id="obj84_ret_word_rt" name="obj084_ret_word_rt" type="hidden" value="" />
+<input id="obj85_ret_word_response" name="obj085_ret_word_response" type="hidden" value="" /> <input id="obj85_ret_word_rt" name="obj085_ret_word_rt" type="hidden" value="" />
+<input id="obj86_ret_word_response" name="obj086_ret_word_response" type="hidden" value="" /> <input id="obj86_ret_word_rt" name="obj086_ret_word_rt" type="hidden" value="" />
+<input id="obj87_ret_word_response" name="obj087_ret_word_response" type="hidden" value="" /> <input id="obj87_ret_word_rt" name="obj087_ret_word_rt" type="hidden" value="" />
+<input id="obj88_ret_word_response" name="obj088_ret_word_response" type="hidden" value="" /> <input id="obj88_ret_word_rt" name="obj088_ret_word_rt" type="hidden" value="" />
+<input id="obj89_ret_word_response" name="obj089_ret_word_response" type="hidden" value="" /> <input id="obj89_ret_word_rt" name="obj089_ret_word_rt" type="hidden" value="" />
+<input id="obj90_ret_word_response" name="obj090_ret_word_response" type="hidden" value="" /> <input id="obj90_ret_word_rt" name="obj090_ret_word_rt" type="hidden" value="" />
+<input id="obj91_ret_word_response" name="obj091_ret_word_response" type="hidden" value="" /> <input id="obj91_ret_word_rt" name="obj091_ret_word_rt" type="hidden" value="" />
+<input id="obj92_ret_word_response" name="obj092_ret_word_response" type="hidden" value="" /> <input id="obj92_ret_word_rt" name="obj092_ret_word_rt" type="hidden" value="" />
+<input id="obj93_ret_word_response" name="obj093_ret_word_response" type="hidden" value="" /> <input id="obj93_ret_word_rt" name="obj093_ret_word_rt" type="hidden" value="" />
+<input id="obj94_ret_word_response" name="obj094_ret_word_response" type="hidden" value="" /> <input id="obj94_ret_word_rt" name="obj094_ret_word_rt" type="hidden" value="" />
+<input id="obj95_ret_word_response" name="obj095_ret_word_response" type="hidden" value="" /> <input id="obj95_ret_word_rt" name="obj095_ret_word_rt" type="hidden" value="" />
+<input id="obj96_ret_word_response" name="obj096_ret_word_response" type="hidden" value="" /> <input id="obj96_ret_word_rt" name="obj096_ret_word_rt" type="hidden" value="" />
+<input id="obj97_ret_word_response" name="obj097_ret_word_response" type="hidden" value="" /> <input id="obj97_ret_word_rt" name="obj097_ret_word_rt" type="hidden" value="" />
+<input id="obj98_ret_word_response" name="obj098_ret_word_response" type="hidden" value="" /> <input id="obj98_ret_word_rt" name="obj098_ret_word_rt" type="hidden" value="" />
+<input id="obj99_ret_word_response" name="obj099_ret_word_response" type="hidden" value="" /> <input id="obj99_ret_word_rt" name="obj099_ret_word_rt" type="hidden" value="" />
+<input id="obj100_ret_word_response" name="obj100_ret_word_response" type="hidden" value="" /> <input id="obj100_ret_word_rt" name="obj100_ret_word_rt" type="hidden" value="" />
+<input id="obj101_ret_word_response" name="obj101_ret_word_response" type="hidden" value="" /> <input id="obj101_ret_word_rt" name="obj101_ret_word_rt" type="hidden" value="" />
+<input id="obj102_ret_word_response" name="obj102_ret_word_response" type="hidden" value="" /> <input id="obj102_ret_word_rt" name="obj102_ret_word_rt" type="hidden" value="" />
+<input id="obj103_ret_word_response" name="obj103_ret_word_response" type="hidden" value="" /> <input id="obj103_ret_word_rt" name="obj103_ret_word_rt" type="hidden" value="" />
+<input id="obj104_ret_word_response" name="obj104_ret_word_response" type="hidden" value="" /> <input id="obj104_ret_word_rt" name="obj104_ret_word_rt" type="hidden" value="" />
+<input id="obj105_ret_word_response" name="obj105_ret_word_response" type="hidden" value="" /> <input id="obj105_ret_word_rt" name="obj105_ret_word_rt" type="hidden" value="" />
+<input id="obj106_ret_word_response" name="obj106_ret_word_response" type="hidden" value="" /> <input id="obj106_ret_word_rt" name="obj106_ret_word_rt" type="hidden" value="" />
+<input id="obj107_ret_word_response" name="obj107_ret_word_response" type="hidden" value="" /> <input id="obj107_ret_word_rt" name="obj107_ret_word_rt" type="hidden" value="" />
+<input id="obj108_ret_word_response" name="obj108_ret_word_response" type="hidden" value="" /> <input id="obj108_ret_word_rt" name="obj108_ret_word_rt" type="hidden" value="" />
+<input id="obj109_ret_word_response" name="obj109_ret_word_response" type="hidden" value="" /> <input id="obj109_ret_word_rt" name="obj109_ret_word_rt" type="hidden" value="" />
+<input id="obj110_ret_word_response" name="obj110_ret_word_response" type="hidden" value="" /> <input id="obj110_ret_word_rt" name="obj110_ret_word_rt" type="hidden" value="" />
+<input id="obj111_ret_word_response" name="obj111_ret_word_response" type="hidden" value="" /> <input id="obj111_ret_word_rt" name="obj111_ret_word_rt" type="hidden" value="" />
+<input id="obj112_ret_word_response" name="obj112_ret_word_response" type="hidden" value="" /> <input id="obj112_ret_word_rt" name="obj112_ret_word_rt" type="hidden" value="" />
+<input id="obj113_ret_word_response" name="obj113_ret_word_response" type="hidden" value="" /> <input id="obj113_ret_word_rt" name="obj113_ret_word_rt" type="hidden" value="" />
+<input id="obj114_ret_word_response" name="obj114_ret_word_response" type="hidden" value="" /> <input id="obj114_ret_word_rt" name="obj114_ret_word_rt" type="hidden" value="" />
+<input id="obj115_ret_word_response" name="obj115_ret_word_response" type="hidden" value="" /> <input id="obj115_ret_word_rt" name="obj115_ret_word_rt" type="hidden" value="" />
+<input id="obj116_ret_word_response" name="obj116_ret_word_response" type="hidden" value="" /> <input id="obj116_ret_word_rt" name="obj116_ret_word_rt" type="hidden" value="" />
+<input id="obj117_ret_word_response" name="obj117_ret_word_response" type="hidden" value="" /> <input id="obj117_ret_word_rt" name="obj117_ret_word_rt" type="hidden" value="" />
+<input id="obj118_ret_word_response" name="obj118_ret_word_response" type="hidden" value="" /> <input id="obj118_ret_word_rt" name="obj118_ret_word_rt" type="hidden" value="" />
+<input id="obj119_ret_word_response" name="obj119_ret_word_response" type="hidden" value="" /> <input id="obj119_ret_word_rt" name="obj119_ret_word_rt" type="hidden" value="" />
+<input id="obj120_ret_word_response" name="obj120_ret_word_response" type="hidden" value="" /> <input id="obj120_ret_word_rt" name="obj120_ret_word_rt" type="hidden" value="" />
+<input id="obj121_ret_word_response" name="obj121_ret_word_response" type="hidden" value="" /> <input id="obj121_ret_word_rt" name="obj121_ret_word_rt" type="hidden" value="" />
+<input id="obj122_ret_word_response" name="obj122_ret_word_response" type="hidden" value="" /> <input id="obj122_ret_word_rt" name="obj122_ret_word_rt" type="hidden" value="" />
+<input id="obj123_ret_word_response" name="obj123_ret_word_response" type="hidden" value="" /> <input id="obj123_ret_word_rt" name="obj123_ret_word_rt" type="hidden" value="" />
+<input id="obj124_ret_word_response" name="obj124_ret_word_response" type="hidden" value="" /> <input id="obj124_ret_word_rt" name="obj124_ret_word_rt" type="hidden" value="" />
+<input id="obj125_ret_word_response" name="obj125_ret_word_response" type="hidden" value="" /> <input id="obj125_ret_word_rt" name="obj125_ret_word_rt" type="hidden" value="" />
+<input id="obj126_ret_word_response" name="obj126_ret_word_response" type="hidden" value="" /> <input id="obj126_ret_word_rt" name="obj126_ret_word_rt" type="hidden" value="" />
+<input id="obj127_ret_word_response" name="obj127_ret_word_response" type="hidden" value="" /> <input id="obj127_ret_word_rt" name="obj127_ret_word_rt" type="hidden" value="" />
+<input id="obj128_ret_word_response" name="obj128_ret_word_response" type="hidden" value="" /> <input id="obj128_ret_word_rt" name="obj128_ret_word_rt" type="hidden" value="" />
+<input id="obj129_ret_word_response" name="obj129_ret_word_response" type="hidden" value="" /> <input id="obj129_ret_word_rt" name="obj129_ret_word_rt" type="hidden" value="" />
+<input id="obj130_ret_word_response" name="obj130_ret_word_response" type="hidden" value="" /> <input id="obj130_ret_word_rt" name="obj130_ret_word_rt" type="hidden" value="" />
+<input id="obj131_ret_word_response" name="obj131_ret_word_response" type="hidden" value="" /> <input id="obj131_ret_word_rt" name="obj131_ret_word_rt" type="hidden" value="" />
+<input id="obj132_ret_word_response" name="obj132_ret_word_response" type="hidden" value="" /> <input id="obj132_ret_word_rt" name="obj132_ret_word_rt" type="hidden" value="" />
+<input id="obj133_ret_word_response" name="obj133_ret_word_response" type="hidden" value="" /> <input id="obj133_ret_word_rt" name="obj133_ret_word_rt" type="hidden" value="" />
+<input id="obj134_ret_word_response" name="obj134_ret_word_response" type="hidden" value="" /> <input id="obj134_ret_word_rt" name="obj134_ret_word_rt" type="hidden" value="" />
+<input id="obj135_ret_word_response" name="obj135_ret_word_response" type="hidden" value="" /> <input id="obj135_ret_word_rt" name="obj135_ret_word_rt" type="hidden" value="" />
+<input id="obj136_ret_word_response" name="obj136_ret_word_response" type="hidden" value="" /> <input id="obj136_ret_word_rt" name="obj136_ret_word_rt" type="hidden" value="" />
+<input id="obj137_ret_word_response" name="obj137_ret_word_response" type="hidden" value="" /> <input id="obj137_ret_word_rt" name="obj137_ret_word_rt" type="hidden" value="" />
+<input id="obj138_ret_word_response" name="obj138_ret_word_response" type="hidden" value="" /> <input id="obj138_ret_word_rt" name="obj138_ret_word_rt" type="hidden" value="" />
+<input id="obj139_ret_word_response" name="obj139_ret_word_response" type="hidden" value="" /> <input id="obj139_ret_word_rt" name="obj139_ret_word_rt" type="hidden" value="" />
+<input id="obj140_ret_word_response" name="obj140_ret_word_response" type="hidden" value="" /> <input id="obj140_ret_word_rt" name="obj140_ret_word_rt" type="hidden" value="" />
+<input id="obj141_ret_word_response" name="obj141_ret_word_response" type="hidden" value="" /> <input id="obj141_ret_word_rt" name="obj141_ret_word_rt" type="hidden" value="" />
+<input id="obj142_ret_word_response" name="obj142_ret_word_response" type="hidden" value="" /> <input id="obj142_ret_word_rt" name="obj142_ret_word_rt" type="hidden" value="" />
+<input id="obj143_ret_word_response" name="obj143_ret_word_response" type="hidden" value="" /> <input id="obj143_ret_word_rt" name="obj143_ret_word_rt" type="hidden" value="" />
+<input id="obj144_ret_word_response" name="obj144_ret_word_response" type="hidden" value="" /> <input id="obj144_ret_word_rt" name="obj144_ret_word_rt" type="hidden" value="" />
+<input id="obj145_ret_word_response" name="obj145_ret_word_response" type="hidden" value="" /> <input id="obj145_ret_word_rt" name="obj145_ret_word_rt" type="hidden" value="" />
+<input id="obj146_ret_word_response" name="obj146_ret_word_response" type="hidden" value="" /> <input id="obj146_ret_word_rt" name="obj146_ret_word_rt" type="hidden" value="" />
+<input id="obj147_ret_word_response" name="obj147_ret_word_response" type="hidden" value="" /> <input id="obj147_ret_word_rt" name="obj147_ret_word_rt" type="hidden" value="" />
+<input id="obj148_ret_word_response" name="obj148_ret_word_response" type="hidden" value="" /> <input id="obj148_ret_word_rt" name="obj148_ret_word_rt" type="hidden" value="" />
+<input id="obj149_ret_word_response" name="obj149_ret_word_response" type="hidden" value="" /> <input id="obj149_ret_word_rt" name="obj149_ret_word_rt" type="hidden" value="" />
+
+<div id="contTask" style="position:relative; display:none; font-family: Arial; text-align: center; font-size: 30px;"><a href="javascript:ContinueTask()">Continue Task</a></div>
+</div>
+
+<!--Instructions Div-->
+<div id="instructions" style="position:relative; margin:0px auto; width: 760px; height: auto; font-family:Arial; font-size:18pt;"><img class="instr" id="instr1" src="URL to the instruction image file for the first part (encoding)" style="width:760px;height:auto;margin-top:100px" />
+<p id="startNotice" style="text-align:center;margin-top:100px;">Click "Start Task" when you are ready to begin the experiment.</p>
+</div>
+
+<div id="startTask" style="position:relative; display:none;font-family: Arial; text-align: center; font-size: 30px;"><a href="javascript:StartTask()">Start Task</a></div>
+
+<!--Retrieval Instructions Div-->
+<div id="instructionsRetrieval" style="margin: 0px auto; width: 780px; height: auto; font-family: Arial; font-size: 18pt; position: relative;"><img class="instr" id="instr2" src="URL to the instruction image file for the second part (retrieval)" style="width: 780px; height: auto; margin-top: 100px;" /> 
+
+<p id="startNoticeRetrieval" style="text-align:center;margin-top:100px;">Click "Start Task" when you are ready to begin the second part of the experiment.</p>
+</div>
+
+<div id="startTaskRetrieval" style="position:relative; display:none; font-family: Arial; text-align: center; font-size: 30px;"><a href="javascript:StartTaskRetrieval()">Start Task</a></div>
+
+<div id="goBack" style="float:left"><a href="javascript:GoBack()">Back</a></div>
+
+<div id="goForward" style="float:right"><a href="javascript:GoForward()">Next</a></div>
+
+
+<!--Ineligible Div-->
+<div id="ineligible" style="display:none; position:relative; width:720px; margin:0 auto;font-family:Arial; text-align:justify;">
+<p>Unfortunately we cannot allow you to continue to the task because you are ineligible for this study. Please return the HIT. Thank you.</p>
+</div>
+<!--Worker Found Div-->
+
+<div id="workerFound" style="font-family: Arial; font-size: 18pt; text-align:center; position:relative; width:720px; margin: 100 auto;display:none;">
+<p>Unfortunately you have already completed a HIT similar to this one. Please return the HIT. Thank you!</p>
+</div>
+<!--Thank You Div-->
+
+<div id="thanks" style="display: none; font-family: Arial; font-size: 16pt; text-align:center; position:relative; width:720px; margin:0 auto;">
+<p>Thank you for participating! </p>
+<p>Please write 2 complete sentences describing what you did in this study before you submit the HIT: <input id="langCheck" name="langCheck" type="text" /></p>
+<!--button id='submitButton' onclick="handleFormSubmit()">Submit your job</button-->
+</div>
+
+
+
+<!--Where the functions go!-->
+<script>
+
+
+var currentQ = 1;// counter. current question
+var currentInstr = 2;
+var isEncoding = true;
+
+//Disable Enter Key
+function stopRKey(evt) { 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+} 
+document.onkeypress = stopRKey; 
+
+//Document ready: show preview, open consent, bind keys
+$(document).ready(function() {
+	BlockIfPreview();
+	//ShowQ(currentQ);//!!!!!!!
+	//$('#consent').hide();
+	$('#goBack').hide();
+	$('#goForward').hide();
+	$('#experimentEncoding').hide();
+	$('#experimentRetrieval').hide();
+	$('#instructionsRetrieval').hide();
+	//$('#startTask').show();//remove
+	$('.displays').hide();
+	$('#submitButton').hide();
+	
+	$(document).bind("keyup","0",Pressed0);
+	$(document).bind("keyup","1",Pressed1);
+	$(document).bind("keyup","4",Pressed4);//new
+	$(document).bind("keyup","5",Pressed5);//new
+	$(document).bind("keyup","6",Pressed6);//new
+	$(document).bind("keyup","7",Pressed7);//new
+});
+
+console.log("hello")
+
+//Prevent worker who has done the task already
+var workerArray = [];
+function getParamFromURL(name) {
+	name = name.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
+	var regexS = "[\?&]"+name+"=([^&#]*)";
+	var regex = new RegExp(regexS);
+	var results = regex.exec(window.location.href);
+	if (results==null) {return "";} 
+	else {return results[1];}
+}
+
+//What to do during preview
+function BlockIfPreview() {
+	if (IsTurkPreview()) {
+		console.log("if (IsTurkPreview())")
+		$('#consent').hide();
+		$('#instructions').show();
+	}
+	else {
+		console.log("not (IsTurkPreview())")
+		var workerID = getParamFromURL("workerId");
+		if (jQuery.inArray(workerID,workerArray)!=-1){
+			$("#workerFound").show();
+		} else {
+			ShowQ(currentQ);
+			$('#instructions').hide();
+		}
+	}
+}
+
+//Consent Form Functions
+function ShowQ(which) {
+	if(currentQ>6) {
+		$("#consent").hide();
+		$("#startTask").show();
+		$("#experimentEncoding").show();
+	} else {
+		$("#page" + currentQ).show();
+	}
+}
+
+function NextQ() {
+	var checkedValue = $("input[type=radio]:checked",
+		"#page" + currentQ).val();
+		if (checkedValue=='yes') {
+			$("#page" +currentQ).hide();
+			currentQ++;
+			ShowQ(currentQ);
+		} else if (checkedValue=='no'){
+			$('#consent').hide();
+			$('#ineligible').show();
+		} else {
+			alert('Please select an answer before moving on!');
+		}
+}
+
+function GoToQ() {
+	$("#page" +currentQ).hide();
+	currentQ++;
+	ShowQ(currentQ);
+}
+
+function StartScreen() {
+	var fields = new Array();
+	fields[1] = "Age";
+	fields[2] = "Education";
+	fields[3] = "Gender";
+	fields[4] = "Ethnicity";
+	fields[5] = "Race";
+	
+	var answers = new Array();
+	age = document.getElementById("d1");
+	answers[1] = age.value;
+	education = document.getElementById("d2"); 
+	answers[2] = education.value;
+	gender = document.getElementById("d3");
+	answers[3] = gender.value;
+	ethnicity = document.getElementById("d4");
+	answers[4] = ethnicity.value;
+	
+	var race = document.getElementById("d5");
+	for (i=0; i<race.options.length;i++) {
+		if (race.options[i].selected==true){
+			answers[i+5] = race.options[i].value;
+		}
+	}
+	
+	var emptyFields = new Array();
+	var blank = 0;
+	emptyFields[1] = "Please complete the following fields before moving on:";
+	for (j=1;j<6;j++) {
+		if (answers[j]=='none') {
+			emptyFields[j+1] = fields[j];
+			blank++
+		}
+	}
+	
+	if (blank==0) {
+		$("#consent").hide();
+		currentInstr = 2;
+		Preview();
+		$("#instructions").show();
+		$("#startNotice").show();
+		$("#startTask").show();
+	} else {
+		alert(emptyFields.join('\n'));
+		var blank = 0;
+	}
+}
+
+function showCloseLevel(idOpen,idClose){
+	document.getElementById(idOpen).style.display = "";
+	document.getElementById(idClose).style.display = "none";
+}
+// End Consent Form Functions
+
+// flow control functions
+function GoBack() {
+	$('#instr'+currentInstr).hide();
+	currentInstr--;
+	Preview();
+}
+
+function GoForward() {
+	$('#instr'+currentInstr).hide();
+	currentInstr++;
+	Preview();
+}
+
+function ContinueTask() {
+	$("#break1").hide();
+	$("#break2").hide();
+	$("#break3").hide();
+	$("#contTask").hide();
+	StartTrialRetrieval();
+}
+
+function Preview() {
+	if (currentInstr>1 && currentInstr<4) {
+		$("#instr"+currentInstr).show();
+	} else if (currentInstr<2) {
+		$("#instr2").show();
+		//$("#instr3").hide();
+		currentInstr = 2;
+	} else if (currentInstr>3) {
+		//$("#instr3").show();
+		$("#instr2").hide();
+		currentInstr = 3;
+	}
+}
+// end flow control functions
+
+
+//Number of Encoding Trials
+var numEncTrials = 134;//134;
+var currEncTrial = 0;
+
+////////////////////
+//Number of Retrieval Trials
+var numWordTrials = 149;//149;
+var currWordTrial = 0;
+var resp = 999; // no response
+
+
+
+//For recording RTs
+var trialRunning = false;
+var startTrialTime = 0;
+
+//For switching to retrieval task
+var isRetrieval = false;
+
+function taskAssign(){
+	if (isRetrieval == false){
+		startTask();
+	}
+	else{
+		startTaskRetrieval();
+	}
+}
+
+//Start task
+function StartTask() {
+		$("#startTask").hide();
+		$("#instructions").hide();
+		$("#experimentEncoding").show();// showing the whole div section
+		StartTrial();
+}
+
+//Start trial
+function StartTrial() {
+	//Timestamp Start
+	trialRunning = true;
+	startTrialTime = new Date().getTime();
+	console.log(startTrialTime);
+	
+	// not needed $("#obj"+currEncTrial+"_enc_trialnum").val(currEncTrial);
+	$("#obj"+currEncTrial+"_enc_stim").show();
+	$("#obj"+currEncTrial+"_enc_word_stim").show();
+
+	var tmp=document.getElementById("encRespCues");
+	tmp.style.display="block";
+
+	setTimeout(function() {
+		$("#obj"+currEncTrial+"_enc_stim").hide();
+		$("#obj"+currEncTrial+"_enc_word_stim").hide();
+		
+		tmp.style.display="none";
+		$("#fixation1").show();
+	}, 2500);//2500
+	
+	setTimeout(function() {
+		$("#fixation1").hide();
+		NextTrial();
+	}, 4000);//3000
+	
+}
+
+//Next trial
+function NextTrial() {
+	if (currEncTrial<numEncTrials) {
+		
+		currEncTrial++;
+		StartTrial();
+	} else if (currEncTrial==numEncTrials) {			
+		currentInstr = 2;
+		//Preview();
+		$('#experimentEncoding').hide();
+		$("#instructionsRetrieval").show();
+		$("#startNoticeRetrieval").show();
+		$("#startTaskRetrieval").show();
+		isRetrieval = true;
+	}	
+}
+
+// Press functions	//////////////////////
+function Pressed0() {
+	resp=0;
+	if (trialRunning == false) {return;}
+	if (isEncoding == false) {return;}
+	$("#obj"+currEncTrial+"_enc_response").val("0");
+
+	var currentTime = new Date().getTime();
+	var RT = currentTime - startTrialTime;
+	$("#obj"+currEncTrial+"_enc_rt").val(RT);
+}	
+
+function Pressed1() {
+	resp=1;
+	if (trialRunning == false) {return;}
+	if (isEncoding == false) {return;}
+	$("#obj"+currEncTrial+"_enc_response").val("1");
+
+	var currentTime = new Date().getTime();
+	var RT = currentTime - startTrialTime;
+	$("#obj"+currEncTrial+"_enc_rt").val(RT);
+}	
+
+function Pressed4() {
+	resp=4;
+	if (trialRunning == false) {return;}
+	if (isEncoding == true) {return;}
+	$("#obj"+currWordTrial+"_ret_word_response").val("4");
+
+	var currentTime = new Date().getTime();
+	var RT = currentTime - startTrialTime;
+	$("#obj"+currWordTrial+"_ret_word_rt").val(RT);
+}	
+
+function Pressed5() {
+	resp=5;
+	if (trialRunning == false) {return;}
+	if (isEncoding == true) {return;}
+	$("#obj"+currWordTrial+"_ret_word_response").val("5");
+
+	var currentTime = new Date().getTime();
+	var RT = currentTime - startTrialTime;
+	$("#obj"+currWordTrial+"_ret_word_rt").val(RT);
+}	
+
+function Pressed6() {
+	resp=6;
+	if (trialRunning == false) {return;}
+	if (isEncoding == true) {return;}
+	$("#obj"+currWordTrial+"_ret_word_response").val("6");
+
+	var currentTime = new Date().getTime();
+	var RT = currentTime - startTrialTime;
+	$("#obj"+currWordTrial+"_ret_word_rt").val(RT);
+}	
+
+function Pressed7() {
+	resp=7;
+	if (trialRunning == false) {return;}
+	if (isEncoding == true) {return;}
+	$("#obj"+currWordTrial+"_ret_word_response").val("7");
+
+	var currentTime = new Date().getTime();
+	var RT = currentTime - startTrialTime;
+	$("#obj"+currWordTrial+"_ret_word_rt").val(RT);
+}	
+
+////////////////////////
+
+//End Encoding Functions
+
+
+////////////// RETRIEVAL FUNCTIONS ///////////////////
+
+
+//Start retrieval task
+function StartTaskRetrieval() {
+		//currentInstr = 2;
+		isEncoding = false;
+		Preview();
+		$("#startTaskRetrieval").hide();
+		$("#instructionsRetrieval").hide();
+		$("#experimentRetrieval").show();
+		StartTrialRetrieval();
+}
+
+//Start trial
+function StartTrialRetrieval() {//
+	trialRunning = true;
+	startTrialTime = new Date().getTime();
+	console.log(startTrialTime);
+	resp = 999;
+	
+	$("#obj"+currWordTrial+"_ret_word_stim").show();
+	var tmp=document.getElementById("retRespCues");
+	tmp.style.display="block";
+	var tmp2=document.getElementById("retRespFeedback");
+	
+	
+	setTimeout(function() {
+		$("#obj"+currWordTrial+"_ret_word_stim").hide();
+		tmp.style.display="none";
+		
+		if (resp==4) {
+			tmp2.innerHTML="Your answer: definitely NEW";
+		} else if (resp==5) {
+			tmp2.innerHTML="Your answer: probably NEW";
+		} else if (resp==6) {
+			tmp2.innerHTML="Your answer: probably OLD";
+		} else if (resp==7) {
+			tmp2.innerHTML="Your answer: definitely OLD";
+		} else {
+			tmp2.innerHTML="no response";
+		}
+		tmp2.style.display="block";
+	}, 2500);//2500
+	
+	setTimeout(function() {
+		tmp2.style.display="none";
+		tmp2.innerHTML=" ";
+		$("#Fixation2").show();
+	}, 3500);//3000
+	
+	setTimeout(function() {
+		$("#Fixation2").hide();
+		NextWordTrial();
+	}, 6000);//3000
+	 
+}
+
+
+function NextWordTrial() {
+	if (currWordTrial<numWordTrials) {
+		
+		currWordTrial++;
+		StartTrialRetrieval();
+	} 
+	else if (currWordTrial==numWordTrials) {			
+		$("#experiment").hide();
+		$("#thanks").show();
+		$("#submitButton").show();
+	}
+}
+
+
+
+
+</script>
